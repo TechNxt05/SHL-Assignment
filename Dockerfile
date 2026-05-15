@@ -35,6 +35,7 @@ COPY --from=builder /root/.cache /root/.cache
 COPY app/ ./app/
 COPY evaluation/ ./evaluation/
 COPY data/ ./data/
+COPY utils/ ./utils/
 
 # Create data directories if they don't exist
 RUN mkdir -p data/raw data/processed data/faiss
