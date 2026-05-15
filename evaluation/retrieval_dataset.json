@@ -1,0 +1,42 @@
+[
+  {
+    "query": "Java developer",
+    "expected": ["Core Java (Advanced Level) (New)", "Java 8 (New)", "Java Design Patterns (New)"]
+  },
+  {
+    "query": "Sales manager",
+    "expected": ["Sales Transformation Report 1.0 - Sales Manager", "Agency Manager Solution", "Sales Interview Guide"]
+  },
+  {
+    "query": "Cashier",
+    "expected": ["Cashier Solution", "Entry Level Cashier Solution", "Count Out The Money"]
+  },
+  {
+    "query": "Project manager",
+    "expected": ["Project Management (2013)", "Management Scenarios", "Occupational Personality Questionnaire OPQ32r"]
+  },
+  {
+    "query": "Python",
+    "expected": ["Python (New)", "Data Science (New)", "AI Skills"]
+  },
+  {
+    "query": "Customer service",
+    "expected": ["Customer Service Phone Solution", "Entry Level Customer Service (General) Solution", "Retail Sales and Service Simulation"]
+  },
+  {
+    "query": "Mechanical engineer",
+    "expected": ["Mechanical Engineering (New)", "Automotive Engineering (New)", "Manufac. & Indust. - Mechanical & Vigilance 8.0"]
+  },
+  {
+    "query": "Administrative",
+    "expected": ["Administrative Professional - Short Form", "Bank Administrative Assistant - Short Form", "Basic Computer Literacy (Windows 10) (New)"]
+  },
+  {
+    "query": "Financial",
+    "expected": ["Financial and Banking Services (New)", "Financial Accounting (New)", "Accounts Payable (New)"]
+  },
+  {
+    "query": "Microservices",
+    "expected": ["Microservices (New)", "RESTful Web Services (New)", "Java Frameworks (New)"]
+  }
+]

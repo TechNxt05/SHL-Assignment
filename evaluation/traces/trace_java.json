@@ -1,0 +1,15 @@
+{
+  "id": "trace_java",
+  "expected_assessments": ["Core Java (Advanced Level) (New)", "Java 8 (New)", "Java Design Patterns (New)"],
+  "turns": [
+    {
+      "user": "I am looking for assessments to hire a senior Java developer."
+    },
+    {
+      "user": "Senior level, 7+ years of experience. They should know OOP and design patterns."
+    },
+    {
+      "user": "No, just focus on technical Java skills for now."
+    }
+  ]
+}

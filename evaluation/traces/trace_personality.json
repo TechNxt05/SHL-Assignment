@@ -1,0 +1,15 @@
+{
+  "id": "trace_personality",
+  "expected_assessments": ["Occupational Personality Questionnaire OPQ32r", "Motivation Questionnaire MQM5"],
+  "turns": [
+    {
+      "user": "Do you have any personality tests?"
+    },
+    {
+      "user": "I want to assess leadership potential and workplace behavior."
+    },
+    {
+      "user": "Senior management level."
+    }
+  ]
+}

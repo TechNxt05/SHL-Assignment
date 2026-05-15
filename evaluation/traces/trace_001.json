@@ -1,0 +1,25 @@
+{
+  "id": "trace_001",
+  "description": "Java developer hiring — mid level",
+  "persona": "Hiring manager at a fintech company looking for a mid-level Java developer with 4 years experience who works with business stakeholders",
+  "expected_assessments": [
+    "Java 8 (New)",
+    "Core Java (Entry Level) (New)",
+    "Automata - Fix (New)",
+    "Technology Professional 8.0 - Short Form"
+  ],
+  "turns": [
+    {
+      "user": "I'm hiring a Java developer who will work closely with business stakeholders"
+    },
+    {
+      "user": "Mid-level, around 4 years of experience"
+    },
+    {
+      "user": "Yes, they need strong Java skills. Some SQL would be helpful too. They also need good communication skills for stakeholder interactions."
+    },
+    {
+      "user": "No specific constraints, remote testing is fine"
+    }
+  ]
+}

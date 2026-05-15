@@ -1,0 +1,46 @@
+# SHL Recommender - Git Exclusion Rules
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Virtual Environments
+venv/
+env/
+.venv/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+
+# Local FAISS Indexes & Embeddings
+# (Built at runtime or included as artifacts if small)
+data/faiss/
+data/processed/bm25*
+*.npy
+
+# Logs & Diagnostics
+*.log
+logs/
+evaluation/reports/
+evaluation/latency_report.json
+evaluation/retrieval_insights.md
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

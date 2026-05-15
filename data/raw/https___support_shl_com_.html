@@ -1,0 +1,635 @@
+<!doctype html>
+<!-- Index Site -->
+<html lang="en">
+    <!-- Head -->
+    <head>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPN5KFD');
+</script>
+<!-- End Google Tag Manager -->        <!-- Title -->
+        <title>Help Center</title>
+        <!-- /Title -->
+
+        <!-- Templates -->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<!-- /Meta -->
+
+<!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./assets/custom_css/custom.css" rel="stylesheet">
+<link href="./assets/custom_css/document.css" rel="stylesheet">
+<!-- /Bootstrap core CSS -->
+
+<!-- Bootstrap Icons -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="shortcut icon" type="image/png" href="./assets/img/favicon-32.png" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- /Bootstrap Icons -->
+
+<!-- Bootstrap Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<!-- /Bootstrap Font -->
+
+<!-- Scripts -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+<!-- /Scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="34466d9c-a30f-4341-82cc-bfb2ce498814" type="text/javascript" async></script>
+
+        <!-- /Templates -->
+    </head>
+    <!-- Head -->
+
+    <body class="h-100 d-flex flex-column bg-shl-grey-tint3">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPN5KFD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->        <!-- Header -->
+<header>
+	<a href="index.html?hl=en" title="Home">
+		<img src="./assets/img/shl-logo-reverse-color.png" class="logo" alt='SHL-Logo'>
+	</a>
+	<img src="./assets/img/support-home-photo-cluster.png" class="cluster" role="presentation" alt='Photo Cluster'>
+	<h1 id="title"><img src="./assets/img/lime-lozenge.png" class="lozenge" role="presentation" alt='Lozenge'><br >SHL Support</h1>
+</header>
+	<div class="py-10 container py-4 bg-shl-grey-tint3" style="width: 100%">
+                        <form method="get" action="search.html" title='Search form'>
+                            <div
+                                class="input-group input-group-lg d-sm-flex d-md-flex d-lg-flex d-xl-flex w-100 mx-auto search-group">
+                                <label for="categorySearch" style="text-indent: -10000px;">Search
+                                </label>
+                                <input
+                                    title='Searchbar'
+                                    type="search"
+                                    id="categorySearch"
+                                    name="q"
+                                    class="form-control shadow-lg text-center"
+                                    placeholder='What can we help you with?'>
+                                <input type="hidden" name="hl" value="en">
+                                <button
+                                    title='Searchbutton'
+                                    class="btn btn-shl-lime btn-outline-light shadow-lg search-button"
+                                    type="submit"
+                                    id="button-search">
+                                    <img aria-hidden="true" alt="search icon" src="./assets/img/searchIcon.svg" width="16px" height="16px">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+					<div class="py-10 container py-4 bg-shl-grey-tint3" style="width: 100%" ><hr></div>
+<!-- Select Language -->
+<!-- Select Language -->
+<div class="language-wrapper align-center" role="nav">
+    <!-- Select -->
+    <span class="language-select-div">
+        <label for="select" hidden>Select Language: </label>
+        <select class="language-select" id="select">
+            <option value="da"> Dansk </option>
+            <option value="de"> Deutsch </option>
+            <option value="en"> English </option>
+            <option value="fr"> Francais </option>
+            <option value="it"> Italiano </option>
+            <option value="nl"> Nederlands </option>
+            <option value="no"> Norsk </option>
+            <option value="fi"> Suomi </option>
+            <option value="sv"> Svenska </option>
+            <option value="zh"> ä¸­æï¼ç®ä½)</option>
+    <!--        <option value="ja"> æ¥æ¬èª</option>     -->       
+        </select>
+    </span>
+    <!-- /Select -->
+
+    <!-- Flags -->
+    <span class="language-flag-div" id="flag">
+    </span>
+    <!-- /Flags -->
+</div>
+<!-- /Select Language -->
+
+<!-- Scipt -->
+<script>
+    //Add EventListener to Select
+    document.getElementById("select").addEventListener('change', changeLanguage);
+    
+    //Set Starting Language to Locale Language
+    setLanguage("en");
+
+    //On Change, change used Language
+    //function changeLanguage() {
+    //    var select =  document.getElementById("select");
+    //    setFlag(select.value);
+    //    var url = new URL(window.location.href);
+    //    url.searchParams.set("hl", select.value);
+    //    window.location.href = url.href;
+    //}
+
+
+
+function changeLanguage() {
+    var select = document.getElementById("select");
+    setFlag(select.value);
+    console.log(select.value);
+
+    // Redirect for Chinese language
+    if (select.value === "zh") {
+        var url = new URL("https://support.shlglobal.cn/?hl=zh");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+
+    // Redirect for Japanese language
+/*    if (select.value === "ja") {
+        var url = new URL("https://support-jp.shl.com/?hl=ja");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+*/
+    // Handle other languages
+    var url = new URL(window.location.href);
+    url.searchParams.set("hl", select.value);
+    window.location.href = url.href;
+}
+
+
+
+
+
+
+
+    
+    //Set Flags to new Language
+    function setFlag(lang) {
+        var flags = document.getElementById("flag");
+        while(flags.firstChild) {
+            flags.removeChild(flags.lastChild);
+        }
+        var flag = document.createElement("img");
+        switch (lang) {
+            case "da":
+                flag.setAttribute("src", "./assets/img/DanishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "de":
+                flag.setAttribute("src", "./assets/img/GermanFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "en":
+                flag.setAttribute("src", "./assets/img/USFlag.png");
+                flag.setAttribute("alt", "US-Flag");
+                var secondFlag = document.createElement("img");
+                secondFlag.setAttribute("src", "./assets/img/UKFlag.png");
+                secondFlag.setAttribute("alt", "UK-Flag");
+                flags.appendChild(secondFlag);
+                break;
+            case "fr":
+                flag.setAttribute("src", "./assets/img/FrenchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "it":
+                flag.setAttribute("src", "./assets/img/ItalianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "nl":
+                flag.setAttribute("src", "./assets/img/DutchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "no":
+                flag.setAttribute("src", "./assets/img/NorwegianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "fi":
+                flag.setAttribute("src", "./assets/img/FinnishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "sv":
+                flag.setAttribute("src", "./assets/img/SwedishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "zh":
+                flag.setAttribute("src", "./assets/img/ChineseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+        /*    case "ja":
+                flag.setAttribute("src", "./assets/img/JapaneseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;*/
+        }
+        flags.appendChild(flag);
+    }
+
+    //Set Language to lang and call setFlag
+    function setLanguage(lang) {
+        var select =  document.getElementById("select");
+        select.value = lang;
+        setFlag(lang);
+    }
+/*	window.onload = (event) => {
+    };
+
+*/
+	window.onload = (event) => {
+    };
+
+</script>
+<!-- Script -->
+<!-- /Select Language -->
+        <!-- /Header -->
+
+        <!-- Main, display of the main Categories -->
+        <main class="py-10 bg-shl-grey-tint3 flex-column flex-grow-1">
+            <section class="py-2 container py-4 ">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 justify-content-center g-4 mt-0 flex-grow-1">
+                    <!-- Display Categories -->
+                        <div class="col">
+                            <div
+                                class="card-hover card border-bottom-0 border-start-0 border-end-0 border-top-lg border-shl-lime h-100 text-center">
+                                <a
+                                    class="card-block link-dark text-decoration-none"
+                                    href="categories.html?hl=en&c=10_91_12_">
+                                        <img src="./assets/img/abstract-curves.jpg" class="card-img-top mx-auto" alt="Candidate"/>
+                                    <div class="card-body">
+                                        <h1 class="card-title h4">Candidate</h1>
+                                        <p class="card-text">FAQs about preparing for, or sitting, an assessment</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div
+                                class="card-hover card border-bottom-0 border-start-0 border-end-0 border-top-lg border-shl-lime h-100 text-center">
+                                <a
+                                    class="card-block link-dark text-decoration-none"
+                                    href="categories.html?hl=en&c=10_91_13_">
+                                        <img src="./assets/img/bot-hand.jpg" class="card-img-top mx-auto" alt="Client"/>
+                                    <div class="card-body">
+                                        <h1 class="card-title h4">Client</h1>
+                                        <p class="card-text">FAQs about system navigation and troubleshooting tips</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <!-- /Display Catgegories -->
+
+                    <!-- Practice Site -->
+                    <div class="col">
+                        <div
+                            class="card-hover card border-bottom-0 border-start-0 border-end-0 border-top-lg border-shl-lime h-100 text-center">
+                                <a
+                                class="card-block link-dark text-decoration-none"
+                                href='https://www.shl.com/shldirect/en/ '
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                    <img
+                                        src="./assets/img/clock.jpg"
+                                        class="card-img-top mx-auto"
+                                        alt='Practice Site'>
+                                    <div class="card-body">
+                                        <h1 class="card-title h4">Practice Site</h1>
+                                        <p class="card-text">Assessment advice, practice tests and Talent with disabilities</p>
+                                    </div>
+                                </a>                              
+                        </div>
+                    </div>
+                    <!-- /Practice Site -->
+
+                    <!-- BrowserCheck -->
+                    <div class="col">
+                        <div
+                            class="card-hover card border-bottom-0 border-start-0 border-end-0 border-top-lg border-shl-lime h-100 text-center">
+                            <a
+                                class="card-block link-dark text-decoration-none"
+                                href="browserCheck.html?hl=en"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img
+                                    src="./assets/img/digital-cloud.jpg"
+                                    class="card-img-top mx-auto"
+                                    alt='Browser Check'>
+                                <div class="card-body">
+                                    <h1 class="card-title h4">Browser Check</h1>
+                                    <p class="card-text">Verifies if your computer settings are compatible with the test</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- BrowserCheck -->
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+<!-- Footer -->
+<footer class="text-center py-3 container-fluid text-center text-white bg-shl-grey flex-column"  style="bottom:0px;">
+    <div class="container-fluid">
+        <div class="row footer-row">
+            <!-- Impressum -->
+            <div class="col text-left text-shl-lime footer-impressum">
+                <div>
+                    Â© 2025 SHL and its affiliates. All rights reserved.
+                </div>
+            </div>
+            <!-- /Impressum -->
+            
+            <!-- Links -->
+            <div class="col text-right text-white">
+                <a href="https://www.shl.com/" class="nounderline link-WhiteToLime">shl.com</a>
+                |
+                <!-- Check if Category is known -->
+                    <a href="./contactUs.html?hl=en" class="nounderline link-WhiteToLime">Contact Us</a>
+                |
+                <a href="https://www.shl.com/en/disability-guidelines-uk/" class="nounderline link-WhiteToLime">Accessibility</a>
+                |
+                <a href="https://www.shl.com/en/privacy/cookies/" class="nounderline link-WhiteToLime">Cookies</a>
+                |
+                <a href="https://www.shl.com/en/privacy/" class="nounderline link-WhiteToLime">Privacy Statement</a>
+                |
+                <a
+                    href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-236&hl=en"
+                    class="nounderline link-WhiteToLime">Data Protection Notice</a>
+                |<br>
+                <a href="https://www.shl.com/en/terms-of-service/" class="nounderline link-WhiteToLime">Terms of Service</a>
+                |
+                <a href='https://www.shl.com/legal/terms-and-conditions/english-uk/ ' class="nounderline link-WhiteToLime">Terms and Conditions</a>
+                |
+            </div>
+            <!-- /Links -->
+        </div>
+    </div>
+    
+</footer>
+<!-- /Footer -->        <!-- Footer -->
+        <!-- Widget without Phonenumber -->
+<!-- Templates -->
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type='text/javascript'>
+    (function () {
+        var g = function (e, h, f, g) {
+            this.get = function (a) {
+                for (var a = a + "=", c = document.cookie.split(";"), b = 0, e = c.length; b < e; b++) {
+                    for (var d = c[b]; " " == d.charAt(0);) 
+                        d = d.substring(1, d.length);
+                    if (0 == d.indexOf(a)) 
+                        return d.substring(a.length, d.length)
+                }
+                return null
+            };
+            this.set = function (a, c) {
+                var b = "",
+                    b = new Date;
+                b.setTime(b.getTime() + 6048E5);
+                b = "; expires=" + b.toGMTString();
+                document.cookie = a + "=" + c + b + "; path=/; "
+            };
+            this.check = function () {
+                var a = this.get(f);
+                if (a) 
+                    a = a.split(":");
+                else if (100 != e) 
+                    "v" == h && (
+                        e = Math.random() >= e / 100
+                            ? 0
+                            : 100
+                    ),
+                    a = [
+                        h, e, 0
+                    ],
+                    this.set(f, a.join(":"));
+                else 
+                    return !0;
+                var c = a[1];
+                if (100 == c) 
+                    return !0;
+                switch (a[0]) {
+                    case "v":
+                        return !1;
+                    case "r":
+                        return c = a[2] % Math.floor(100 / c),
+                        a[2]++,
+                        this.set(f, a.join(":")),
+                        !c
+                }
+                return !0
+            };
+            this.go = function () {
+                if (this.check()) {
+                    var a = document.createElement("script");
+                    a.type = "text/javascript";
+                    a.src = g;
+                    document.body && document
+                        .body
+                        .appendChild(a)
+                }
+            };
+            this.start = function () {
+                var t = this;
+                "complete" !== document.readyState
+                    ? window.addEventListener
+                        ? window.addEventListener("load", function () {
+                            t.go()
+                        }, !1)
+                        : window.attachEvent && window.attachEvent("onload", function () {
+                            t.go()
+                        })
+                    : t.go()
+            };
+        };
+        try {
+            (new g(
+                100,
+                "r",
+                "QSI_S_ZN_3w4wOrWAQZP1UUu",
+                "https://zn3w4worwaqzp1uuu-shl1.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_3w4wOrWAQZP1UUu"
+            )).start()
+        } catch (i) {}
+    })();
+</script>
+<div id='ZN_3w4wOrWAQZP1UUu'>
+    <!--DO NOT REMOVE-CONTENTS PLACED HERE-->
+</div>
+<!--END WEBSITE FEEDBACK SNIPPET-->
+<!-- /Templates -->
+<!-- Side Widget -->
+<div class="widget-wrapper">
+    <!-- Open Widget Button -->
+    <div class="widget-button-section">
+        <button
+            title='Toggle Widget'
+            id="widget-button"
+            class="widget-button accordion-button widget-button-collapsed"
+            onclick="onClickWidget()"></button>
+    </div>
+    <!-- /Open Widget Button -->
+
+    <!-- Widget -->
+    <div id="widget" class="bg-shl-lime widget-section widget-collapse" style="display: none;">
+        <div class="container-sm bg-shl-lime widget-container">
+            <div class="row">
+                <!-- ContactUs and Check if Category is available -->
+                <div class="col p-0">
+                    <div class="card widget-top-card">
+                            <a href="./contactUs.html?hl=en" class="widget-link" rel="noopener noreferrer">
+                                <div class="row-1 pt-3 widget-div">
+                                    <img
+                                        src="./assets/img/outline_contact_page_black_24dp.png"
+                                        class="card-img-top widget-img"
+                                        alt='Contact'>
+                                    <p class="widget-paragraph">
+                                        Contact Form
+                                    </p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                <!-- /ContactUs -->
+
+                <!-- Give Feedback, needs to be implemented -->
+                <div class="col p-0">
+                    <div class="card widget-card">
+                        <a id="widgetFeedbackAnker" class="widget-link" href="javascript:;" onclick="feedback()">
+                            <div class="row-1 pt-3 widget-div">
+                                <img
+                                    src="./assets/img/outline_rate_review_black_24dp.png"
+                                    class="card-img-top widget-img"
+                                    alt='Chat'>
+                                <p class="widget-paragraph">
+                                    Give Feedback
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Give Feedback -->
+
+                <!-- Scheduled Maintenance and check if Category is known -->
+                <div class="col p-0">
+                    <div class="card widget-bottom-card">
+                            <a href="schedule.html?hl=en" class="widget-link" rel="noopener noreferrer">
+                                <div class="row-1 pt-3 widget-div">
+                                    <img
+                                        src="./assets/img/outline_event_black_24dp.png"
+                                        class="card-img-top widget-img"
+                                        alt='Calendar'>
+                                    <p class="widget-paragraph">
+                                        Scheduled Maintenance
+                                    </p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                <!-- /Scheduled Maintenance -->
+
+            </div>
+        </div>
+    </div>
+    <!-- /Widget -->
+</div>
+<!-- /Side Widget -->
+<script>
+    //Extend Widget onClick, and turn Button
+    function onClickWidget() {
+        var widget = document.getElementById("widget");
+        var button = document.getElementById("widget-button");
+        var numbers = document.getElementById("widget-numbers");
+        if (widget.style.display === "none") {
+            widget.style.display = "block";
+            button
+                .classList
+                .add("widget-button-open");
+            button
+                .classList
+                .remove("widget-button-collapsed");
+        } else {
+            widget.style.display = "none";
+            button
+                .classList
+                .remove("widget-button-phone-open");
+            button
+                .classList
+                .add("widget-button-collapsed");
+            button
+                .classList
+                .remove("widget-button-open");
+        }
+    } 
+	function feedback(evt)
+	{
+		//evt.preventDefault();
+		if( QSI && QSI.API )
+		{
+			if( QSI._repeatCall )
+			{
+				QSI.API.unload();
+				QSI.API.load().done( function() {
+				  QSI.API.run();
+				});
+			}
+			else
+			{
+				QSI._repeatCall = true;
+				QSI.API.run();
+			}
+		}
+		else
+		{
+			console.log("QSI not initialized");
+		}
+		
+		return false;
+	}
+
+    window.setTimeout(onClickWidget, 10);
+</script>
+<!-- /Java Script for Widget -->
+        <!-- /Widget -->
+<script>
+    window.haptikInitSettings = {
+        "business-id": "8127",
+        "client-id": "5c3ba0ae7efa21fdafe8e6368d17be58bb926eaf",
+        "base-url": "https://api-na.haptikapi.com/",
+        "ignore-storage": true,
+        "custom-css": "./assets/custom_css/bot.css",
+        
+        sdkEvents: event => {
+            event['event'] = event['event_name']
+            dataLayer.push(event)
+        }
+    };
+
+
+    if (document.cookie.indexOf("CookieConsent=") === -1){
+        cookieStore.addEventListener('change', ({changed}) => {
+            for (const {name, value} of changed) {
+               if (name === "CookieConsent" && value.includes("necessary:true")) {
+                    addBot();
+               }
+            }
+        });
+    } else {
+        addBot();
+    }
+
+    function addBot() {
+        var botScript = document.createElement('script');
+        botScript.setAttribute('src','https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js');
+        botScript.setAttribute('charset','UTF-8');
+        botScript.setAttribute('text','text/javascript');
+        document.body.appendChild(botScript);
+    }
+</script>
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-47402278-3"></script>    </body>
+</html>
+<!-- /Index -->

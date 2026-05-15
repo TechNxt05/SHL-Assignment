@@ -1,0 +1,2579 @@
+<!doctype html>
+
+
+
+
+<!-- HTML Code -->
+<html lang="en">
+
+    <!-- Head -->
+    <head>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPN5KFD');
+</script>
+<!-- End Google Tag Manager -->        <!-- Title -->
+        <title>Help Center</title>
+        <!-- /Title -->
+
+        <!-- Templates -->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<!-- /Meta -->
+
+<!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./assets/custom_css/custom.css" rel="stylesheet">
+<link href="./assets/custom_css/document.css" rel="stylesheet">
+<!-- /Bootstrap core CSS -->
+
+<!-- Bootstrap Icons -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="shortcut icon" type="image/png" href="./assets/img/favicon-32.png" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- /Bootstrap Icons -->
+
+<!-- Bootstrap Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<!-- /Bootstrap Font -->
+
+<!-- Scripts -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+<!-- /Scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="34466d9c-a30f-4341-82cc-bfb2ce498814" type="text/javascript" async></script>
+
+        <!-- /Templates -->
+
+        <!-- Style -->
+        <style>
+            a,
+            h3 {
+                color: #6d6c6e;
+                text-decoration: none;
+            }
+        </style>
+        <!-- Style -->
+    </head>
+    <!-- /Head -->
+
+    <!-- Body -->
+    <body class="bg-shl-grey-tint3">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPN5KFD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->        <!-- Header -->
+        <!--CANDIDATE BANNER-->
+        <header>
+			<a href="index.html?hl=en" title="Home">
+				<img src="./assets/img/shl-logo-reverse-color.png" class="logo" alt='SHL-Logo'>
+			</a>
+            <img src="./assets/img/support-candidate-photo-cluster.png" class="cluster" role="presentation" alt='Photo Cluster'>
+            <h1 id="title"><img src="./assets/img/plum-lozenge.png" class="lozenge" role="presentation" alt='Lozenge'><br/>Candidate Support</h1>
+        </header>
+        <!--END CANDIDATE BANNER-->
+
+<!-- Select Language -->
+<!-- Select Language -->
+<div class="language-wrapper align-center" role="nav">
+    <!-- Select -->
+    <span class="language-select-div">
+        <label for="select" hidden>Select Language: </label>
+        <select class="language-select" id="select">
+            <option value="da"> Dansk </option>
+            <option value="de"> Deutsch </option>
+            <option value="en"> English </option>
+            <option value="fr"> Francais </option>
+            <option value="it"> Italiano </option>
+            <option value="nl"> Nederlands </option>
+            <option value="no"> Norsk </option>
+            <option value="fi"> Suomi </option>
+            <option value="sv"> Svenska </option>
+            <option value="zh"> ä¸­æï¼ç®ä½)</option>
+    <!--        <option value="ja"> æ¥æ¬èª</option>     -->       
+        </select>
+    </span>
+    <!-- /Select -->
+
+    <!-- Flags -->
+    <span class="language-flag-div" id="flag">
+    </span>
+    <!-- /Flags -->
+</div>
+<!-- /Select Language -->
+
+<!-- Scipt -->
+<script>
+    //Add EventListener to Select
+    document.getElementById("select").addEventListener('change', changeLanguage);
+    
+    //Set Starting Language to Locale Language
+    setLanguage("en");
+
+    //On Change, change used Language
+    //function changeLanguage() {
+    //    var select =  document.getElementById("select");
+    //    setFlag(select.value);
+    //    var url = new URL(window.location.href);
+    //    url.searchParams.set("hl", select.value);
+    //    window.location.href = url.href;
+    //}
+
+
+
+function changeLanguage() {
+    var select = document.getElementById("select");
+    setFlag(select.value);
+    console.log(select.value);
+
+    // Redirect for Chinese language
+    if (select.value === "zh") {
+        var url = new URL("https://support.shlglobal.cn/?hl=zh");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+
+    // Redirect for Japanese language
+/*    if (select.value === "ja") {
+        var url = new URL("https://support-jp.shl.com/?hl=ja");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+*/
+    // Handle other languages
+    var url = new URL(window.location.href);
+    url.searchParams.set("hl", select.value);
+    window.location.href = url.href;
+}
+
+
+
+
+
+
+
+    
+    //Set Flags to new Language
+    function setFlag(lang) {
+        var flags = document.getElementById("flag");
+        while(flags.firstChild) {
+            flags.removeChild(flags.lastChild);
+        }
+        var flag = document.createElement("img");
+        switch (lang) {
+            case "da":
+                flag.setAttribute("src", "./assets/img/DanishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "de":
+                flag.setAttribute("src", "./assets/img/GermanFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "en":
+                flag.setAttribute("src", "./assets/img/USFlag.png");
+                flag.setAttribute("alt", "US-Flag");
+                var secondFlag = document.createElement("img");
+                secondFlag.setAttribute("src", "./assets/img/UKFlag.png");
+                secondFlag.setAttribute("alt", "UK-Flag");
+                flags.appendChild(secondFlag);
+                break;
+            case "fr":
+                flag.setAttribute("src", "./assets/img/FrenchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "it":
+                flag.setAttribute("src", "./assets/img/ItalianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "nl":
+                flag.setAttribute("src", "./assets/img/DutchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "no":
+                flag.setAttribute("src", "./assets/img/NorwegianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "fi":
+                flag.setAttribute("src", "./assets/img/FinnishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "sv":
+                flag.setAttribute("src", "./assets/img/SwedishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "zh":
+                flag.setAttribute("src", "./assets/img/ChineseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+        /*    case "ja":
+                flag.setAttribute("src", "./assets/img/JapaneseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;*/
+        }
+        flags.appendChild(flag);
+    }
+
+    //Set Language to lang and call setFlag
+    function setLanguage(lang) {
+        var select =  document.getElementById("select");
+        select.value = lang;
+        setFlag(lang);
+    }
+/*	window.onload = (event) => {
+    };
+
+*/
+	window.onload = (event) => {
+    };
+
+</script>
+<!-- Script -->
+<!-- /Select Language -->
+        <!-- /Header -->
+            <!-- Breadcrumb-->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+						<li class="breadcrumb-item"><a class=" link-BlackToLime" href="index.html?hl=en">Home</a></li>
+                    <li class="breadcrumb-item mw-150px" aria-current="page">Candidate</li>
+                </ol>
+            </nav>
+            <!-- /Breadcrumb-->
+
+            <!-- Main -->
+
+            <main id="categories" class="bg-shl-grey-tint3">
+                <section class="container-fluid flex-column search-section" style="padding-right: 0px">
+
+                    <!-- Search -->
+                    <div class="py-10 container py-4">
+                        <form method="get" action="search.html" title='Search form'>
+                            <div
+                                class="input-group input-group-lg d-sm-flex d-md-flex d-lg-flex d-xl-flex w-100 mx-auto search-group">
+                                <label for="categorySearch" hidden="hidden">Search
+                                </label>
+                                <input
+                                    title='Searchbar'
+                                    type="search"
+                                    id="categorySearch"
+                                    name="q"
+                                    class="form-control shadow-lg text-center"
+                                    placeholder='What can we help you with?'>
+                                <input type="hidden" name="c" value="10_91_12_">
+                                <input type="hidden" name="hl" value="en">
+                                <button
+                                    title='Searchbutton'
+                                    class="btn btn-shl-lime btn-outline-light shadow-lg search-button"
+                                    type="submit"
+                                    id="button-search">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Search -->
+
+                    <!-- Search by topic -->
+                    <hr>
+                    <h2 class=" h3">
+                        Search by Topic:</h2>
+                    <div class="container topic-container mx-auto">
+                        <div class="row row-cols-1 topic-row-cols-md-5 g-0">
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Platforms">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Platforms
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_12_37_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_37_39_" class="topic-link">Issues with Logging in and Accessing Tests</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_37_40_" class="topic-link">Error Messages</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_37_41_" class="topic-link">Audio, Webcam and Screen Issues</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_37_42_" class="topic-link">Timed Assessments</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_37_43_" class="topic-link">Assessments - Timing, Submitting and General Issues</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_37_44_" class="topic-link">Deadlines and Results</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="System and Browser Requirements">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        System and Browser Requirements
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_12_51_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_51_52_" class="topic-link">System Requirements</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_51_53_" class="topic-link">Browser-specific Questions</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                                    <li>
+                                                                        <a
+                                                                            href="browserCheck.html?hl=en&c=10_91_12_"
+                                                                            class="topic-link"
+                                                                            target="_blank"
+                                                                            rel="noopener noreferrer nofollow">Browser Check</a>
+                                                                    </li>
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Additional Support">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Additional Support
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_12_54_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_54_55_" class="topic-link">Practice Tests and Assessment Advice</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_54_56_" class="topic-link">Talent With Disabilities</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_54_57_" class="topic-link">General Assessment Enquiries</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_54_89_" class="topic-link">Virtual Assessment Support</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                                <li>
+                                                                    <a
+                                                                        href='https://www.shl.com/shldirect/en/ '
+                                                                        class="topic-link"
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer nofollow">Practice Site</a>
+                                                                    </li>
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Data Questions">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Data Questions
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_12_58_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_58_59_" class="topic-link">Data Management</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_58_60_" class="topic-link">Data About Me</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Product Troubleshooting">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Product Troubleshooting
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_12_163_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_163_166_" class="topic-link">Contact Centre Simulations (CCSims)</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_12_163_177_" class="topic-link">Smart Interview Professional</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+                <!-- END Search by Topic-->
+
+                <!-- Top FAQs-->
+                <section class="bg-shl-grey-tint3 container-fluid flex-column">
+                        <h2 class=" h3">View our Frequently Asked Questions:</h2>
+                        <div class="container-fluid pt-4 accordion-section">
+                            <div class="row accordion-section">
+                                <div class="col-xl-9 accordion-section">
+                                    <div class="container-fluid accordion-section">
+                                        <div class="accordion shadow mb-5 accordion-section" id="accordionAuth">
+                                            <div class="accordion-item">
+                                                <div class="d-flex align-items-center justify-content-between px-4 py-5">
+                                                    <div class="me-3">
+                                                        <h3 class="mb-0 h4">Category FAQ</h3>
+                                                        <!-- <p class="card-text text-gray-500">FAQs about preparing for, or sitting, an assessment</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-195">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-195"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-195">
+                                                            I have been invited to complete an assessment. How do I access my test? 
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-195"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-195"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p"><img alt="Login Prompt" class="mediaImage" src="attachmentservice/attachments/getMedia/SHL-Candidate-Mediapool-195_1/en/*/*/SHL-Candidate-Mediapool-195_1" style="  max-width:100%;
+  width:auto;
+"><br> <br> The first time you visit the TalentCentralâ¢ platform to complete an assessment, you will need to create an account.<br> <br> Click on the link in your invitation email (highlighted in yellow in the below screenshot):<br> <br> <img alt="" class="mediaImage" src="attachmentservice/attachments/getMedia/SHL-Candidate-Mediapool-195_2/en/*/*/SHL-Candidate-Mediapool-195_2" style="  max-width:100%;
+  width:auto;
+"><br> <br> The following page will be displayed. Click on <b>Create Account</b><br> <br> <img alt="" class="mediaImage" src="attachmentservice/attachments/getMedia/SHL-Candidate-Mediapool-195_3/en/*/*/SHL-Candidate-Mediapool-195_3" style="  max-width:100%;
+  width:auto;
+"><br> <br> Enter your details in the required fields and click on <b>Sign Up</b>. You will need to make sure that you remember the password you have chosen so you can log back in at a later time, if required.<br> <br> <img alt="" class="mediaImage" src="attachmentservice/attachments/getMedia/SHL-Candidate-Mediapool-195_4/en/*/*/SHL-Candidate-Mediapool-195_4" style="  max-width:100%;
+  width:auto;
+"><br> <br> Please follow the on-screen instructions to proceed to your assessment.<br> <br> If you did not find an answer to your query in this article, please try one of the following articles:<br> - <i><a href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-196&amp;c=10_91_12_&amp;hl=en" target="_blank" title="">The invitation email asks me to log in with my existing password, but it doesn't let me log in. What password should I be using? </a></i><br> - <i><a href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-199&amp;c=10_91_12_&amp;hl=en" target="_blank" title="">What should I do if I have forgotten my password?</a></i><br> - <i><a href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-200&amp;c=10_91_12_&amp;hl=en" target="_blank" title="">What should I do if I have forgotten my username?</a></i><br> <br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form&nbsp;widget on the right side of this page.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-195" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-195" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-195">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-195">
+                <label for="comment_SHL-Candidate-Article-195" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-195" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-195" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-195" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-195')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-195">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-195" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-195')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-195">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-195");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-195"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-195"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-195").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-195").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-195"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-195"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-204">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-204"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-204">
+                                                            What do I do if I am getting an error code?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-204"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-204"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p"><span style="font-size: 12.0pt;">If you're receiving an error message when trying to access your assessment, please clear your browser's cache and history data, and load the assessment again. Should the error persist, please check the following solutions:<br> <br> Error 404<br> Error 403<br> Error 502 (Bad gateway)<br> Error: This site is currently unavailable while we perform scheduled release activities.<br> Error: This assessment was previously closed before completion and needs to be reset.<br> Error: Oops, there's an error.<br> Error: There has been an error processing your request.<br> <br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.</span></div> 
+<div class="p"><span style="font-size: 12.0pt;"><a id="Error404" name="Error404" class="kfirst-doc-anchor-dest"><b>Error 404</b></a><br> <br> The error #404 may be presented if the link you are using is broken. We would advise to copy the entire link and paste this directly into the address bar.<br> <br> If this error occurs, please contact us as soon as possible by using the Contact Form widget on the right side of this page.<br> <br> <b><a id="Error403" name="Error403" class="kfirst-doc-anchor-dest">Error 403</a></b><br> <br> Error 403 indicates that your access to the URL is forbidden. For SHL systems, this error often appears on integrated sites during system maintenance. Please try accessing your assessment after the maintenance window. Please click <a class="referenceLink" href="viewArticle.html?d=SHL-Candidate-Article-202&hl=en" target="documentShow" data-doc-id="guid:SHL-Candidate-Article-202" title="">What should I do when the test system is not available due to maintenance activities?</a> for more information on planned releases. If you believe the error is not caused by system maintenance, please contact your recruiter.<br> <br> If you require further assistance, please get in touch with us by clicking on the Contact Form widget on the right side of this page.</span></div> 
+<div class="p"><span style="font-size: 12.0pt;"><a name="Error502"><b>Error 502 (Bad gateway)</b></a><br> <br> This error normally appears when the server is down and is timing out. If this error occurs, please contact us as soon as possible by using the Contact Form widget on the right side of this page.<br> <br> <a id="ErrorRelease" name="ErrorRelease" class="kfirst-doc-anchor-dest"><b>Error: This site is currently unavailable while we perform scheduled release activities.</b></a><br> <br> Please click <a class="referenceLink" href="viewArticle.html?d=SHL-Candidate-Article-202&hl=en" target="documentShow" data-doc-id="guid:SHL-Candidate-Article-202" title="">What should I do when the test system is not available due to maintenance activities?</a> for more information on planned releases.<br> <br> <a id="ErrorReset" name="ErrorReset" class="kfirst-doc-anchor-dest"><b>Error: This assessment was previously closed before completion and needs to be reset.</b></a><br> <br> This error indicates you have (been) previously logged out of the system while completing your test. Please contact your recruiter or Technical Support team to get your assessment reset.<br> <br> You can get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.<br> <br> <a id="ErrorOopsError" name="ErrorOopsError" class="kfirst-doc-anchor-dest"><b>Error: Oops, there's an error.</b></a><br> <br> If this error occurs, please clear your browsing history and try again. If the problem persists, please contact us as soon as possible by using the Contact Form widget on the right side of this page.<br> <br> <a id="ErrorProcessing" name="ErrorProcessing" class="kfirst-doc-anchor-dest"><b>Error: There has been an error processing your request.</b></a><br> <br> If this error occurs, please clear your browsing history and try again. If the problem persists, please contact us as soon as possible by using the Contact Form widget on the right side of this page.</span></div> 
+<div class="p">&nbsp;</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-204" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-204" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-204">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-204">
+                <label for="comment_SHL-Candidate-Article-204" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-204" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-204" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-204" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-204')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-204">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-204" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-204')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-204">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-204");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-204"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-204"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-204").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-204").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-204"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-204"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-225">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-225"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-225">
+                                                            I have completed my test(s). How do I get my results?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-225"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-225"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Once you have completed your test(s), the company you are taking the test(s) for will be notified that your results are ready.<br> <br> In order to keep your results confidential, only the person chosen as the results recipient at the company you are taking the test(s) for, will have access to your results. For this reason, SHL support teams will not be able to provide you with your results. However, we can confirm whether or not you have completed your test(s).<br> <br> For feedback on your performance, or for information about the next stage of the process, please contact the company you are taking the test(s) for directly. As SHL support teams are unable to provide company contact details, please refer to your initial communication from them or to the company's website. Please note that the extent of the feedback you receive will be at the company's discretion.<br> <br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-225" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-225" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-225">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-225">
+                <label for="comment_SHL-Candidate-Article-225" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-225" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-225" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-225" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-225')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-225">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-225" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-225')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-225">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-225");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-225"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-225"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-225").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-225").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-225"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-225"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-229">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-229"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-229">
+                                                            I have dyslexia, a visual impairment or other condition and I will need extra time for the assessment. Who can I contact?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-229"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-229"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Test time extensions require approval from the company you are taking the test for.<br> <br>Please refer back to your recruiter to see if you are eligible for additional time to complete time restricted assessment(s).<br> <br>You may be required by the recruiter to provide evidence of your condition.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-229" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-229" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-229">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-229">
+                <label for="comment_SHL-Candidate-Article-229" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-229" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-229" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-229" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-229')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-229">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-229" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-229')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-229">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-229");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-229"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-229"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-229").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-229").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-229"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-229"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-169">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-169"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-169">
+                                                            I have been asked to complete a Video Interview test. How does it work?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-169"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-169"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">When you take our Video Interview test, your responses will be recorded via headphones and webcam, and you will be scored based on your responses. You will need the following before you attempt the test:</div> 
+<ul> 
+ <li>PC or laptop </li>
+ <li>Webcam connected to the system or built-in laptop webcam </li>
+ <li>Headphones with microphone (some systems offer built in microphone option; please do not use wireless headphones) </li>
+ <li>Uninterrupted internet network (min speed of 256Kbps) </li>
+</ul> 
+<div class="p"><br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.</div> 
+<div class="p">&nbsp;</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-169" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-169" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-169">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-169">
+                <label for="comment_SHL-Candidate-Article-169" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-169" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-169" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-169" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-169')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-169">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-169" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-169')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-169">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-169");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-169"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-169"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-169").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-169").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-169"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-169"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-193">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-193"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-193">
+                                                            Where can I find a browser analyzer to see if my computer settings are compatible with the assessment?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-193"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-193"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Please <a href="https://support.shl.com/browserCheck.html?hl=en" target="_blank" title="">click here</a> to check if your browser is compatible with the assessment. If you require additional assistance configuring your computer settings, please use the form at the bottom of the browser check screen to send the information to our support team.&nbsp;<br> <br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-193" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-193" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-193">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-193">
+                <label for="comment_SHL-Candidate-Article-193" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-193" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-193" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-193" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-193')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-193">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-193" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-193')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-193">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-193");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-193"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-193"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-193").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-193").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-193"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-193"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-231">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-231"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-231">
+                                                            Can you delete my data?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-231"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-231"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">We can check our systems to delete any data that we hold on you as a data controller. This would include any time where you have 1) called in directly for support, 2) if you have taken any practice tests on our site or 3) if you are registered to receive marketing information from SHL. Unless there is a pending legal action or dispute which would require us to retain your personal information until the matter is resolved, we will delete your personal information that we hold as a data controller.<br><br>For any personal data in relation to an assessment that you have taken for another organisation or potential employer, you will need to relay this question to your employer or potential employer directly as we cannot delete candidate data without our clientâs express permission as they are the controller of your personal information. Please ensure to provide your employer or potential employer with the information below, in order for them to instruct us to process your request.<br><br>Please provide the client with the following details:<br>the assessment type and date completed;<br>full name and email address you used; and<br>the name of the organisation for whom you took the assessment at the request of a specific organization (i.e., as part of an application for employment).</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-231" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-231" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-231">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-231">
+                <label for="comment_SHL-Candidate-Article-231" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-231" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-231" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-231" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-231')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-231">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-231" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-231')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-231">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-231");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-231"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-231"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-231").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-231").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-231"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-231"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-14d85661-2918-47b4-g36b-g4c6e567080c">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-14d85661-2918-47b4-g36b-g4c6e567080c"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-14d85661-2918-47b4-g36b-g4c6e567080c">
+                                                            Attempting Video Assessment
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-14d85661-2918-47b4-g36b-g4c6e567080c"
+                                                        aria-labelledby="heading-14d85661-2918-47b4-g36b-g4c6e567080c"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p"><strong>1. What is the test all about?</strong></div> 
+<div class="p">This is an AI driven Online Interview platform where your responses will be recorded via headphone and webcam and you will be scored based on the respones recorded.</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>2. What is the test duration?</strong></div> 
+<div class="p">20-25 mins</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>3) What are the technical requirements to take the test?</strong></div> 
+<div class="p">Answer: The test has 4 basic requirements:</div> 
+<div class="p">A Personal Computer / Laptop<br> A Webcam connected to the System (Not required in case of Laptop with functional in-built Webcam)<br> Headphones with microphone<br> Smooth and uninterrupted Internet connectivity; Download and Upload Speed of minimum 1 Mbps (throughout the testing session, which will last for approximately 20 minutes)</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>4) Candidate unable to hear on testing page</strong></div> 
+<div class="p">Answer: Please check whether access to microphone is provided while at video testing page; if you were not prompted for the same, please go to your browser settings Ã  site setting Ã allow microphone.</div> 
+<div class="p">Please prefer using Mozilla Firefox for the assessment, you will be prompted to provide access to both the webcam and microphone that you will have to âallowâ.</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>5) Candidate is unable to see himself/herself on video testing page</strong></div> 
+<div class="p">Answer: Please see if you have provided access to your webcam while at video testing page, if you were not prompted for the same, please go to your browser settings and allow webcam.</div> 
+<div class="p">Please prefer using Mozilla Firefox for the assessment you will be prompted to provide access to both webcam and microphone that you will have to approve.</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>6) Not able to hear properly in video testing page/there is some noise</strong></div> 
+<div class="p">Answer: Please close the test window and login again using Mozilla Firefox preferably and when prompted for allowing access to your Microphone please select Microphone tagged with âHigh-Definition Audioâ. Do not use the Default Microphone in the dropdown.</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>7) Test got logged out stating âMicrophone was unpluggedâ</strong></div> 
+<div class="p">Answer: Please close the test window and login again, the test will not allow you to move ahead without the Microphone. Please check if the microphones are plugged in properly and start test again.</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><strong>8) Test logged out stating âIllegal window switch detected</strong></div> 
+<div class="p">Answer: You are not allowed to open any other Browser / Switch between the Test Screen and other widows/ Minimize the Test Window. The Test will get locked permanently if a candidate is found switching through windows while taking the Test. Please connect with the HR/Recruiter that brought you this opportunity for further steps.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_14d85661-2918-47b4-g36b-g4c6e567080c" >
+    <div><hr><br></div>
+    <div id="helpful_14d85661-2918-47b4-g36b-g4c6e567080c" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_14d85661-2918-47b4-g36b-g4c6e567080c">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_14d85661-2918-47b4-g36b-g4c6e567080c">
+                <label for="comment_14d85661-2918-47b4-g36b-g4c6e567080c" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_14d85661-2918-47b4-g36b-g4c6e567080c" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_14d85661-2918-47b4-g36b-g4c6e567080c" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_14d85661-2918-47b4-g36b-g4c6e567080c" class="like-button" aria-label='Yes' onclick="like('14d85661-2918-47b4-g36b-g4c6e567080c')" style="padding: 1px;" aria-labelledby="headline_14d85661-2918-47b4-g36b-g4c6e567080c">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_14d85661-2918-47b4-g36b-g4c6e567080c" class="dislike-button"  aria-label='No' onclick="dislike('14d85661-2918-47b4-g36b-g4c6e567080c')" style="padding: 1px;" aria-labelledby="headline_14d85661-2918-47b4-g36b-g4c6e567080c">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_14d85661-2918-47b4-g36b-g4c6e567080c");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("14d85661-2918-47b4-g36b-g4c6e567080c"))  
+        var showDislike = dislikeArray.some(x => x.includes("14d85661-2918-47b4-g36b-g4c6e567080c"));
+        if (showLike) {
+            document.getElementById("like_14d85661-2918-47b4-g36b-g4c6e567080c").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_14d85661-2918-47b4-g36b-g4c6e567080c").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("14d85661-2918-47b4-g36b-g4c6e567080c"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("14d85661-2918-47b4-g36b-g4c6e567080c"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-186">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-186"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-186">
+                                                            How do I turn off my pop-up blocker in Firefox, Google Chrome and Safari? 
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-186"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-186"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Some assessments run in a separate pop-up window. Pop-up blockers on your PC can prevent your test window from opening. Active pop-up blockers should be disabled. It may be useful to note that all modern browsers have a pop-up blocker pre-installed. This may also be the case with some anti-virus software packages and toolbars. Please read the manual that came with your anti-virus software to find out how you can temporarily disable your pop-up blockers.<br> <br> Microsoft Edge:<br> 1) Click on the 3 dots in the top right corner of the browser window<br> 2) Click Settings<br> 3) Select the View Advanced settings option<br> 4) Slide the Block pop-ups option to Off<br> <br> Firefox:<br> (older versions of Firefox)<br> 1) Click on the Firefox button<br> 2) Click on Options, then Options again<br> 3) Go to the Content tab<br> 4) Deselect Block Pop-up Windows<br> 5) Click OK<br> <br> (Firefox version 57 onwards)<br> 1) Go to the Open Menu icon (3 horizontal lines) and click Options<br> 2) Click Privacy and Security<br> 3) Go to the Permissions section<br> 4) Deselect Block pop-up windows<br> <br> Google Chrome:<br> (older versions of Google Chrome)<br> 1) Go to the Settings icon (3 horizontal lines) and click Settings<br> 2) Scroll down and click on Show Advanced Settings...<br> 3) Click Content Settings under Privacy<br> 4) Scroll down to the Pop Ups section and choose Allow all sites to show pop-ups<br> <br> (Google Chrome version 63 onwards)<br> 1) Go to the Customise and control Google Chrome icon (3 dots) and click Settings<br> 2) Scroll down and click on the Advanced button<br> 3) Click Content Settings under Privacy and Security<br> 4) Click on the Pop Ups section and allow pop-ups<br> <br> Safari (Mac only):<br> 1) Click on Safari<br> 2) Click on Preferences<br> 3) Go to Websites<br> 4) De-select Block pop-up windows<br> <br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-186" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-186" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-186">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-186">
+                <label for="comment_SHL-Candidate-Article-186" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-186" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-186" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-186" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-186')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-186">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-186" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-186')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-186">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-186");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-186"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-186"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-186").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-186").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-186"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-186"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-173">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-173"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-173">
+                                                            I&rsquo;m getting an error on my test, how can I fix it?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-173"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-173"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Please note this article applies to the AMCAT / TalentCentral+ Candidate Experience for assessments â if the code you have received is not listed please Contact Us</div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><span style="font-size: 12.0pt;"><strong>1. Error Code IC200</strong><br> You are logging in with an Invalid username and/or password, we request you to check your credentials again and try to log back in the test, the credentials are case sensitive.&nbsp;</span></div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><span style="font-size: 12.0pt;"><strong>2. Error Code LEX200</strong><br> Your test has been invalidated. You will not be able to resume your test. Please contact the person who asked you to complete the test for further details.</span></div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><span style="font-size: 12.0pt;"><strong>3. Error Code TC100</strong><br> You have either completed or submitted your test. You will not be able to resume your test. Please contact the person who asked you to complete the test for further details.</span></div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><span style="font-size: 12.0pt;"><strong>4. Error Code LEX100</strong><br> Your test login credentials have expired. You will not be able to attempt the test. Please contact the person who asked you to complete the test for further details.</span></div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><span style="font-size: 12.0pt;"><strong>5. Error Code ETA100</strong><br> Your test is not yet activated. Please try again during your assigned testing window.</span></div> 
+<div class="p">&nbsp;</div> 
+<div class="p"><span style="font-size: 12.0pt;"><strong>6. Other Error Codes</strong></span></div> 
+<table style="border-collapse: collapse;width: 709.0px;" width="709"> 
+ <colgroup> 
+ </colgroup> 
+ <tbody> 
+  <tr> 
+   <td class="xl66" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;white-space: nowrap;border-top: 1.0px solid black;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;">Error Code</span></span></span></span></span></div> </td> 
+   <td class="xl67" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: 1.0px solid black;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;">Reason</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">AUD100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out because audio recording could not be started</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">CAP100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Your Captcha information does not match</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">DCH100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You are attempting to login from a different device. Please log in from your original test device</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">DCO100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">This assessment is not supported on a Mac, please continue your assessment in Windows</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">FIP100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Access denied. You are attempting to log in from a forbidden IP address [%s]</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">FSI100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because they have misused the 'full-screen' function</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">GLL100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out of the test because your location could not be detected or because location information was blocked</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">GLL200</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Unable to capture geo location</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">HWI100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Audio playback failed. Please check your computer's speakers and microphone</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">IC100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Invalid SVAR ID requested</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">IC200</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Invalid username and/or password. Please try again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">IC300</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Security question answer not found</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">IC400</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Security question information not provided. Cannot proceed</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">IC500</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">SVAR ID not registered</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">IC600</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Username and password not found</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">LEX300</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">SVAR ID expired</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">LEX400</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Resume Test: 0 Attempts Left</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">MIC100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out because your microphone got disconnected</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">MIC200</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out because your microphone was disconnected while recording</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">MIC300</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out because your microphone is not connected.</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">MIC400</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Try the SVAR test again using a different microphone</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 55.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">MIC500</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">If you are unable to configure the microphone, exit the test and contact the person who asked you to complete the test for further details</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">NE100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Could not play the necessary audio files. Please check your network connection and try again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">NE200</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Could not submit your response to server. Please check your network connection and try again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 59.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">NE300</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Could not upload the recorded audio. Please check your network connection. Check your firewall settings to enable audio file uploads.</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">NE400</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Cannot connect to server. Please try again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">NE500</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Could not connect to network. Please wait for two minutes and try again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">OFF100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because they have gone 'off-focus' by switching browsers</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 57.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">PNS100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Access denied, platform not supported. Please take the test on the desktop to have a seamless experience</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 61.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">PSL100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because they have used the 'print screen' function too many times</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 56.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RES100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have exceeded the allowed count for resuming the test. You will no longer be able to resume the test</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RES200</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You must wait %time% minutes after logging out before you log in again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RL100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You are attempting to log in with the wrong test URL</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 55.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RP100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because the invigilator has terminated the assessment due to a violation of the assessment rules</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 54.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RP101</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because of connectivity issues. Please try again after a few minutes</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 53.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RP102</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because of connectivity issues. Please try again after a few minutes</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 49.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">RP103</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because of connectivity issues. Please try again after a few minutes</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">TE100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Cannot proceed as the allotted time for the test has already expired</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 63.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">WCI100</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out of the test because your webcam could not be detected or because your webcam was blocked. Please connect your webcam and try again.</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 75.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">WCI200</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">We are unable to detect a camera on your device. A camera is mandatory for online proctoring of this test. You have been logged out of the test. Please make sure your camera is connected and try again.</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl70" style="border-bottom: 1.0px solid black;height: 58.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">WCI300</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You have been logged out of the test because your webcam could not be detected or because your webcam was blocked. Please connect your webcam and try again</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">WCI400</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The user has been logged out because the image could not be captured</span></span></span></span></span></div> </td> 
+  </tr> 
+  <tr> 
+   <td class="xl68" style="border-bottom: 1.0px solid black;height: 43.0px;width: 80.0px;text-align: left;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: 1.0px solid black;"> <div class="p"><span style="font-size: 12.0pt;"><span style="font-weight: 700;"><span style="color: black;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="line-height: normal;">WCI500</span></span></span></span></span></span></div> </td> 
+   <td class="xl69" style="border-bottom: 1.0px solid black;width: 629.0px;vertical-align: middle;white-space: normal;padding-top: 1.0px;padding-right: 1.0px;padding-left: 1.0px;border-top: none;border-right: 1.0px solid black;border-left: none;"> <div class="p"><span style="font-size: 12.0pt;"><span style="color: black;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Cannot enable camera for video recording</span></span></span></span></span></div> </td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-173" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-173" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-173">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-173">
+                <label for="comment_SHL-Candidate-Article-173" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-173" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-173" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-173" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-173')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-173">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-173" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-173')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-173">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-173");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-173"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-173"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-173").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-173").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-173"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-173"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Candidate-Article-188">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Candidate-Article-188"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Candidate-Article-188">
+                                                            What are the system requirements for SHL systems?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Candidate-Article-188"
+                                                        aria-labelledby="heading-SHL-Candidate-Article-188"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Please note your system settings may differ from the below depending on the assessments you are completing.<br> <br> You will need to use a computer that meets the following recommended system requirements:<br> <br> <b>Connection speed</b><br> You should use a 56Kb, or faster, Internet connection to get the best experience.<br> Please use a 1Mb per second, or faster, Internet connection for video-based assessments.<br> <br> <b>Pop-up windows</b><br> Please disable any pop-up blocking software, that may prevent the test from downloading, before attempting the tests. University or company networks may have restrictions in place so please check with your local systems administrator first.<br> <br> Supported components are ones that we have thoroughly tested and certified for use with the assessment system. We strongly recommend you use one of the following:<br> <br> <b>Supported Internet browsers</b><br> - Google Chrome Version 50 and higher (Windows, Mac)<br> - Mozilla Firefox Version 50 and higher (Windows, Mac)<br> - Safari Version 11 and higher (Windows, Mac)<br> - Microsoft Edge Version 80 and higher (Windows)<br> <br> <b>Supported operating systems</b><br> - Apple Mac OS 11.x (up to Mac OS X v11.2 1 - Big Sur)<br> - Microsoft Windows 10, 8, 7, Vista<br> <br> Some of our assessments require you to have a display applet installed.<br> <br> <b>Supported display applets</b><br> - Active Scripting (or JavaScript)<br> - ActiveX Controls and Plug-ins<br> - Java Runtime Environment (virtual machine)<br> <br> <b>Auto translate</b><br> When using Microsoft Edge please ensure you disable the page translation function.<br> When the translate function is enabled the translate button is shown in blue in the address bar:<br> <img alt="" class="mediaImage" src="attachmentservice/attachments/getMedia/SHL-Candidate-Mediapool-188_1/en/*/*/SHL-Candidate-Mediapool-188_1" style="  max-width:100%;
+  width:auto;
+"><br> Please click on the translate button and click on Show Original.<br> <br> Please note, most browsers, and their components, can be downloaded from the supplier's website for free. <a href="https://support.shl.com/browserCheck.html?hl=en&amp;c=10_91_12_" title="">Click here</a> to check your settings now.<br> <br> If you have any questions, please get in touch with your local Technical Support team by using the Contact Form widget on the right side of this page.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Candidate-Article-188" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Candidate-Article-188" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Candidate-Article-188">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Candidate-Article-188">
+                <label for="comment_SHL-Candidate-Article-188" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Candidate-Article-188" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Candidate-Article-188" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Candidate-Article-188" class="like-button" aria-label='Yes' onclick="like('SHL-Candidate-Article-188')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-188">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Candidate-Article-188" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Candidate-Article-188')" style="padding: 1px;" aria-labelledby="headline_SHL-Candidate-Article-188">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Candidate-Article-188");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-188"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-188"));
+        if (showLike) {
+            document.getElementById("like_SHL-Candidate-Article-188").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Candidate-Article-188").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Candidate-Article-188"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Candidate-Article-188"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <img
+                                        src="./assets/img/SideBanner.png"
+                                        title='Sidebanner'
+                                        alt='Banner'
+                                        class="category-banner"/>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!-- /Top FAQs -->
+
+                <!-- ToTop -->
+<!-- ToTop Button -->
+<div id="toTop" class="bg-shl-grey-tint3 toTop">
+    <button onclick='window.location.href="#title"' title='To the Top' class="accordion-button bg-shl-lime" style="border-radius: 3px; height: 20px; width: 60px; text-align: center;"></button>
+</div>
+<!-- /ToTop Button -->
+
+<!-- ToTop Script -->
+<script>
+    toTop();
+
+    //Display toTop Button if document-height is to big
+    function toTop() {
+         var toTop = document.getElementById("toTop");
+        if(document.documentElement.scrollHeight > 1080) {
+            toTop.style.display = "block";
+        } else {
+            toTop.style.display = "none";
+        }
+    } 
+</script>
+<!-- /ToTop Script -->                <!-- /ToTop -->
+            </main>
+
+            
+
+            <!-- Footer -->
+<!-- Footer -->
+<footer class="text-center py-3 container-fluid text-center text-white bg-shl-grey flex-column"  style="bottom:0px;">
+    <div class="container-fluid">
+        <div class="row footer-row">
+            <!-- Impressum -->
+            <div class="col text-left text-shl-lime footer-impressum">
+                <div>
+                    Â© 2025 SHL and its affiliates. All rights reserved.
+                </div>
+            </div>
+            <!-- /Impressum -->
+            
+            <!-- Links -->
+            <div class="col text-right text-white">
+                <a href="https://www.shl.com/" class="nounderline link-WhiteToLime">shl.com</a>
+                |
+                <!-- Check if Category is known -->
+                    <a href="./contactUs.html?hl=en&c=10_91_12_" class="nounderline link-WhiteToLime">Contact Us</a>
+                |
+                <a href="https://www.shl.com/en/disability-guidelines-uk/" class="nounderline link-WhiteToLime">Accessibility</a>
+                |
+                <a href="https://www.shl.com/en/privacy/cookies/" class="nounderline link-WhiteToLime">Cookies</a>
+                |
+                <a href="https://www.shl.com/en/privacy/" class="nounderline link-WhiteToLime">Privacy Statement</a>
+                |
+                <a
+                    href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-236&hl=en"
+                    class="nounderline link-WhiteToLime">Data Protection Notice</a>
+                |<br>
+                <a href="https://www.shl.com/en/terms-of-service/" class="nounderline link-WhiteToLime">Terms of Service</a>
+                |
+                <a href='https://www.shl.com/legal/terms-and-conditions/english-uk/ ' class="nounderline link-WhiteToLime">Terms and Conditions</a>
+                |
+            </div>
+            <!-- /Links -->
+        </div>
+    </div>
+    
+</footer>
+<!-- /Footer -->            <!-- Footer -->
+            <!-- Widget, display Phone if Category is Client -->
+<!-- Templates -->
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type='text/javascript'>
+    (function () {
+        var g = function (e, h, f, g) {
+            this.get = function (a) {
+                for (var a = a + "=", c = document.cookie.split(";"), b = 0, e = c.length; b < e; b++) {
+                    for (var d = c[b]; " " == d.charAt(0);) 
+                        d = d.substring(1, d.length);
+                    if (0 == d.indexOf(a)) 
+                        return d.substring(a.length, d.length)
+                }
+                return null
+            };
+            this.set = function (a, c) {
+                var b = "",
+                    b = new Date;
+                b.setTime(b.getTime() + 6048E5);
+                b = "; expires=" + b.toGMTString();
+                document.cookie = a + "=" + c + b + "; path=/; "
+            };
+            this.check = function () {
+                var a = this.get(f);
+                if (a) 
+                    a = a.split(":");
+                else if (100 != e) 
+                    "v" == h && (
+                        e = Math.random() >= e / 100
+                            ? 0
+                            : 100
+                    ),
+                    a = [
+                        h, e, 0
+                    ],
+                    this.set(f, a.join(":"));
+                else 
+                    return !0;
+                var c = a[1];
+                if (100 == c) 
+                    return !0;
+                switch (a[0]) {
+                    case "v":
+                        return !1;
+                    case "r":
+                        return c = a[2] % Math.floor(100 / c),
+                        a[2]++,
+                        this.set(f, a.join(":")),
+                        !c
+                }
+                return !0
+            };
+            this.go = function () {
+                if (this.check()) {
+                    var a = document.createElement("script");
+                    a.type = "text/javascript";
+                    a.src = g;
+                    document.body && document
+                        .body
+                        .appendChild(a)
+                }
+            };
+            this.start = function () {
+                var t = this;
+                "complete" !== document.readyState
+                    ? window.addEventListener
+                        ? window.addEventListener("load", function () {
+                            t.go()
+                        }, !1)
+                        : window.attachEvent && window.attachEvent("onload", function () {
+                            t.go()
+                        })
+                    : t.go()
+            };
+        };
+        try {
+            (new g(
+                100,
+                "r",
+                "QSI_S_ZN_3w4wOrWAQZP1UUu",
+                "https://zn3w4worwaqzp1uuu-shl1.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_3w4wOrWAQZP1UUu"
+            )).start()
+        } catch (i) {}
+    })();
+</script>
+<div id='ZN_3w4wOrWAQZP1UUu'>
+    <!--DO NOT REMOVE-CONTENTS PLACED HERE-->
+</div>
+<!--END WEBSITE FEEDBACK SNIPPET-->
+<!-- /Templates -->
+<!-- Side Widget -->
+<div class="widget-wrapper">
+    <!-- Open Widget Button -->
+    <div class="widget-button-section">
+        <button
+            title='Toggle Widget'
+            id="widget-button"
+            class="widget-button accordion-button widget-button-collapsed"
+            onclick="onClickWidget()"></button>
+    </div>
+    <!-- /Open Widget Button -->
+
+    <!-- Widget -->
+    <div id="widget" class="bg-shl-lime widget-section widget-collapse" style="display: none;">
+        <div class="container-sm bg-shl-lime widget-container">
+            <div class="row">
+                <!-- ContactUs and Check if Category is available -->
+                <div class="col p-0">
+                    <div class="card widget-top-card">
+                            <a
+                                href="./contactUs.html?hl=en&c=10_91_12_"
+                                class="widget-link"
+                                rel="noopener noreferrer">
+                                <div class="row-1 pt-3 widget-div">
+                                    <img
+                                        src="./assets/img/outline_contact_page_black_24dp.png"
+                                        class="card-img-top widget-img"
+                                        alt='Contact'>
+                                    <p class="widget-paragraph">
+                                        Contact Form
+                                    </p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                <!-- /ContactUs -->
+
+                <!-- Give Feedback, needs to be implemented -->
+                <div class="col p-0">
+                    <div class="card widget-card">
+                        <a id="widgetFeedbackAnker" class="widget-link" href="javascript:;" onclick="feedback()">
+                            <div class="row-1 pt-3 widget-div">
+                                <img
+                                    src="./assets/img/outline_rate_review_black_24dp.png"
+                                    class="card-img-top widget-img"
+                                    alt='Chat'>
+                                <p class="widget-paragraph">
+                                    Give Feedback
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Give Feedback -->
+
+                <!-- Scheduled Maintenance and check if Category is known -->
+                <div class="col p-0">
+                    <div class="card widget-bottom-card">
+                            <a href="schedule.html?hl=en&c=10_91_12_" class="widget-link" rel="noopener noreferrer">
+                                <div class="row-1 pt-3 widget-div">
+                                    <img
+                                        src="./assets/img/outline_event_black_24dp.png"
+                                        class="card-img-top widget-img"
+                                        alt='Calendar'>
+                                    <p class="widget-paragraph">
+                                        Scheduled Maintenance
+                                    </p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                <!-- /Scheduled Maintenance -->
+
+            </div>
+        </div>
+    </div>
+    <!-- /Widget -->
+</div>
+<!-- /Side Widget -->
+<script>
+    //Extend Widget onClick, and turn Button
+    function onClickWidget() {
+        var widget = document.getElementById("widget");
+        var button = document.getElementById("widget-button");
+        var numbers = document.getElementById("widget-numbers");
+        if (widget.style.display === "none") {
+            widget.style.display = "block";
+            button
+                .classList
+                .add("widget-button-open");
+            button
+                .classList
+                .remove("widget-button-collapsed");
+        } else {
+            widget.style.display = "none";
+            button
+                .classList
+                .remove("widget-button-phone-open");
+            button
+                .classList
+                .add("widget-button-collapsed");
+            button
+                .classList
+                .remove("widget-button-open");
+        }
+    } 
+	function feedback(evt)
+	{
+		//evt.preventDefault();
+		if( QSI && QSI.API )
+		{
+			if( QSI._repeatCall )
+			{
+				QSI.API.unload();
+				QSI.API.load().done( function() {
+				  QSI.API.run();
+				});
+			}
+			else
+			{
+				QSI._repeatCall = true;
+				QSI.API.run();
+			}
+		}
+		else
+		{
+			console.log("QSI not initialized");
+		}
+		
+		return false;
+	}
+
+    window.setTimeout(onClickWidget, 10);
+</script>
+<!-- /Java Script for Widget -->
+            <!-- /Widget -->
+<script>
+    window.haptikInitSettings = {
+        "business-id": "8127",
+        "client-id": "5c3ba0ae7efa21fdafe8e6368d17be58bb926eaf",
+        "base-url": "https://api-na.haptikapi.com/",
+        "ignore-storage": true,
+        "custom-css": "./assets/custom_css/bot.css",
+        
+        sdkEvents: event => {
+            event['event'] = event['event_name']
+            dataLayer.push(event)
+        }
+    };
+
+
+    if (document.cookie.indexOf("CookieConsent=") === -1){
+        cookieStore.addEventListener('change', ({changed}) => {
+            for (const {name, value} of changed) {
+               if (name === "CookieConsent" && value.includes("necessary:true")) {
+                    addBot();
+               }
+            }
+        });
+    } else {
+        addBot();
+    }
+
+    function addBot() {
+        var botScript = document.createElement('script');
+        botScript.setAttribute('src','https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js');
+        botScript.setAttribute('charset','UTF-8');
+        botScript.setAttribute('text','text/javascript');
+        document.body.appendChild(botScript);
+    }
+</script>
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-47402278-3"></script>    </body>
+</html>

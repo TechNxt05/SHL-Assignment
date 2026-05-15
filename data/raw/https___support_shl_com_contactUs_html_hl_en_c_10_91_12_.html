@@ -1,0 +1,1667 @@
+<!doctype html>
+
+
+
+<html lang="en">
+	<!-- Head -->
+	<head>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPN5KFD');
+</script>
+<!-- End Google Tag Manager -->		<!-- Title -->
+		<title>Help Center</title>
+		<!-- /Title -->
+
+		<!-- Templates -->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<!-- /Meta -->
+
+<!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./assets/custom_css/custom.css" rel="stylesheet">
+<link href="./assets/custom_css/document.css" rel="stylesheet">
+<!-- /Bootstrap core CSS -->
+
+<!-- Bootstrap Icons -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="shortcut icon" type="image/png" href="./assets/img/favicon-32.png" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- /Bootstrap Icons -->
+
+<!-- Bootstrap Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<!-- /Bootstrap Font -->
+
+<!-- Scripts -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+<!-- /Scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="34466d9c-a30f-4341-82cc-bfb2ce498814" type="text/javascript" async></script>
+
+		<!-- /Templates -->
+
+		<!-- Scripts -->
+		<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+		<script src="./assets/js/ua-parser.min.js"></script>
+		<!-- Scripts -->
+	</head>
+	<!-- /Head -->
+	<body class="bg-shl-grey-tint3">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPN5KFD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script>
+    window.haptikInitSettings = {
+        "business-id": "8127",
+        "client-id": "5c3ba0ae7efa21fdafe8e6368d17be58bb926eaf",
+        "base-url": "https://api-na.haptikapi.com/",
+        "ignore-storage": true,
+        "custom-css": "./assets/custom_css/bot.css",
+        
+        sdkEvents: event => {
+            event['event'] = event['event_name']
+            dataLayer.push(event)
+        }
+    };
+
+
+    if (document.cookie.indexOf("CookieConsent=") === -1){
+        cookieStore.addEventListener('change', ({changed}) => {
+            for (const {name, value} of changed) {
+               if (name === "CookieConsent" && value.includes("necessary:true")) {
+                    addBot();
+               }
+            }
+        });
+    } else {
+        addBot();
+    }
+
+    function addBot() {
+        var botScript = document.createElement('script');
+        botScript.setAttribute('src','https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js');
+        botScript.setAttribute('charset','UTF-8');
+        botScript.setAttribute('text','text/javascript');
+        document.body.appendChild(botScript);
+    }
+</script>
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-47402278-3"></script>
+	<!-- Main -->
+	<main  class="h-100 d-flex flex-column">										
+		<!--  Header -->
+<header>
+	<a href="index.html?hl=en" title="Home">
+		<img src="./assets/img/shl-logo-reverse-color.png" class="logo" alt='SHL-Logo'>
+	</a>
+	<img src="./assets/img/support-home-photo-cluster.png" class="cluster" role="presentation" alt='Photo Cluster'>
+	<h1 id="title"><img src="./assets/img/lime-lozenge.png" class="lozenge" role="presentation" alt='Lozenge'><br >SHL Support</h1>
+</header>
+
+<!-- Select Language -->
+<!-- Select Language -->
+<div class="language-wrapper align-center" role="nav">
+    <!-- Select -->
+    <span class="language-select-div">
+        <label for="select" hidden>Select Language: </label>
+        <select class="language-select" id="select">
+            <option value="da"> Dansk </option>
+            <option value="de"> Deutsch </option>
+            <option value="en"> English </option>
+            <option value="fr"> Francais </option>
+            <option value="it"> Italiano </option>
+            <option value="nl"> Nederlands </option>
+            <option value="no"> Norsk </option>
+            <option value="fi"> Suomi </option>
+            <option value="sv"> Svenska </option>
+            <option value="zh"> ä¸­æï¼ç®ä½)</option>
+    <!--        <option value="ja"> æ¥æ¬èª</option>     -->       
+        </select>
+    </span>
+    <!-- /Select -->
+
+    <!-- Flags -->
+    <span class="language-flag-div" id="flag">
+    </span>
+    <!-- /Flags -->
+</div>
+<!-- /Select Language -->
+
+<!-- Scipt -->
+<script>
+    //Add EventListener to Select
+    document.getElementById("select").addEventListener('change', changeLanguage);
+    
+    //Set Starting Language to Locale Language
+    setLanguage("en");
+
+    //On Change, change used Language
+    //function changeLanguage() {
+    //    var select =  document.getElementById("select");
+    //    setFlag(select.value);
+    //    var url = new URL(window.location.href);
+    //    url.searchParams.set("hl", select.value);
+    //    window.location.href = url.href;
+    //}
+
+
+
+function changeLanguage() {
+    var select = document.getElementById("select");
+    setFlag(select.value);
+    console.log(select.value);
+
+    // Redirect for Chinese language
+    if (select.value === "zh") {
+        var url = new URL("https://support.shlglobal.cn/?hl=zh");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+
+    // Redirect for Japanese language
+/*    if (select.value === "ja") {
+        var url = new URL("https://support-jp.shl.com/?hl=ja");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+*/
+    // Handle other languages
+    var url = new URL(window.location.href);
+    url.searchParams.set("hl", select.value);
+    window.location.href = url.href;
+}
+
+
+
+
+
+
+
+    
+    //Set Flags to new Language
+    function setFlag(lang) {
+        var flags = document.getElementById("flag");
+        while(flags.firstChild) {
+            flags.removeChild(flags.lastChild);
+        }
+        var flag = document.createElement("img");
+        switch (lang) {
+            case "da":
+                flag.setAttribute("src", "./assets/img/DanishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "de":
+                flag.setAttribute("src", "./assets/img/GermanFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "en":
+                flag.setAttribute("src", "./assets/img/USFlag.png");
+                flag.setAttribute("alt", "US-Flag");
+                var secondFlag = document.createElement("img");
+                secondFlag.setAttribute("src", "./assets/img/UKFlag.png");
+                secondFlag.setAttribute("alt", "UK-Flag");
+                flags.appendChild(secondFlag);
+                break;
+            case "fr":
+                flag.setAttribute("src", "./assets/img/FrenchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "it":
+                flag.setAttribute("src", "./assets/img/ItalianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "nl":
+                flag.setAttribute("src", "./assets/img/DutchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "no":
+                flag.setAttribute("src", "./assets/img/NorwegianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "fi":
+                flag.setAttribute("src", "./assets/img/FinnishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "sv":
+                flag.setAttribute("src", "./assets/img/SwedishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "zh":
+                flag.setAttribute("src", "./assets/img/ChineseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+        /*    case "ja":
+                flag.setAttribute("src", "./assets/img/JapaneseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;*/
+        }
+        flags.appendChild(flag);
+    }
+
+    //Set Language to lang and call setFlag
+    function setLanguage(lang) {
+        var select =  document.getElementById("select");
+        select.value = lang;
+        setFlag(lang);
+    }
+/*	window.onload = (event) => {
+    };
+
+*/
+	window.onload = (event) => {
+    };
+
+</script>
+<!-- Script -->
+<!-- /Select Language -->
+		<!--  Header -->
+		<!-- Breadcrumbs -->
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a class=" link-BlackToLime" href="index.html?hl=en">Home</a></li>
+							<li class="breadcrumb-item">
+									<a class=" link-BlackToLime" href="categories.html?hl=en&c=10_91_12_">Candidate</a>
+							</li>
+					<li class="breadcrumb-item" aria-current="page">Contact Us</li>
+					
+				</ol>
+			</nav>
+		<!-- Breadcrumbs -->
+		<div class="py-10 bg-shl-grey-tint3 flex-column flex-grow-1">
+			<svg id="definition" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="required" viewbox="0 0 128 128"><g><path d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"></path></g></symbol></defs></svg>
+			<!-- ThankYou Message -->
+			<section id="welcomeSec" style="display:none;" class="py-10 container py-4 ">
+				<div class="row">
+					<h2 class="h2"><b>Contact</b></h2>
+					<p>
+						<h3 class="h5">Thank you for your enquiry. </h3>
+					</p>
+					<p>
+						<h3 class="h5">Your request has been registered successfully and you will receive an e-mail shortly with your case number.</h3>
+					</p>
+				</div>
+			</section>
+			<!-- /ThankYou Message -->
+			<section id="contactSec" class="py-10 container py-4 ">
+				<div class="row">				
+    				<div class="row pt-3">
+    					<div class="col">
+							<h1 class="h4">Contact Form</h1>
+						</div>
+					</div>
+    				<div class="row pt-2">
+    					<div class="col">
+							To contact SHL please fill out the below form, which will take approximately 1 minute to complete.
+						</div>
+					</div>
+					<div class="row pt-2">
+						<div class="col">
+							We aim to respond to your e-mail within 1 working day (excluding weekends and public holidays). 
+						</div>
+					</div>
+					<!-- <div class="row pt-2">
+						<div class="col">
+							Your choice of country/region will determine which local team will receive your query.
+						</div>
+					</div> -->
+					<div class="row pt-2 pb-2">
+						<p><br></p>
+						<div class="col">
+							<svg class="icon" focusable="false"><use xlink:href="#required"></use></svg> indicates a required field
+						</div>
+					</div>
+					<!-- ContactUS  Form -->
+        			<form id="contactForm" name="contactForm" method="POST" class="needs-validation" novalidate onsubmit="return true;" >
+						<!-- Dynamic Part -->
+						<div id="dynamicPart">
+						</div>
+						<!-- /Dynamic Part -->
+
+						<!-- Static Part -->
+						<div id="staticPart" class="pt-3" style="display: none;">
+							<!-- Recaptcha -->
+							<div class="row pt-2 mb-3" data-id="fldCaptcha">
+								<div class="col-sm-4 col-form-label">
+								</div>
+								<div class="col-sm-8">
+																
+									<div>
+										<div class="g-recaptcha" data-sitekey='6Lez2wITAAAAABhiB2MfCLHHfea9YQcCJG2uqpbr' data-sitekey_shl="6Lez2wITAAAAABhiB2MfCLHHfea9YQcCJG2uqpbr"></div>
+									</div>
+									<div id="fldCaptcha_feedback" class="invalid-feedback">Check Recaptcha</div>
+								</div>
+							</div>
+							<!-- /Recaptcha -->
+							<div class="row">
+								<div class="col-sm-4 col-form-label">
+								</div>
+								<div class="col-sm-8 mx-auto">
+									<p>								
+										Please read this <a href="/viewArticle.html?d=SHL-Candidate-Article-236&hl=en">Data Protection Notice (âNoticeâ)</a> to continue. It sets out how and why SHL Group Limited collect your personal information.
+									</p>
+									<p>
+										Please read the entire Notice carefully. If you have any questions about this Notice please refer to the FAQ page.
+									</p>
+									<div class="row">
+										<div class="col-sm-2">
+											<button id="btnSubmit" name="btnSubmit" class="flex-grow" type="submit" value='Submit'>Submit</button>		
+										</div>
+										<div class="col-sm-10">
+											<p>
+												By submitting this Contact Us form I confirm that I have read and understood the Notice.
+											</p>
+										</div>
+										
+									</div>									
+								</div>
+							</div>							
+						</div>
+						<!-- /Static Part -->
+        			</form>
+					<!-- /Form -->
+        		</div>
+        	</section>		
+		</div>
+		
+
+		<!-- Footer  -->
+<!-- Footer -->
+<footer class="text-center py-3 container-fluid text-center text-white bg-shl-grey flex-column"  style="bottom:0px;">
+    <div class="container-fluid">
+        <div class="row footer-row">
+            <!-- Impressum -->
+            <div class="col text-left text-shl-lime footer-impressum">
+                <div>
+                    Â© 2025 SHL and its affiliates. All rights reserved.
+                </div>
+            </div>
+            <!-- /Impressum -->
+            
+            <!-- Links -->
+            <div class="col text-right text-white">
+                <a href="https://www.shl.com/" class="nounderline link-WhiteToLime">shl.com</a>
+                |
+                <!-- Check if Category is known -->
+                    <a href="./contactUs.html?hl=en&c=10_91_12_" class="nounderline link-WhiteToLime">Contact Us</a>
+                |
+                <a href="https://www.shl.com/en/disability-guidelines-uk/" class="nounderline link-WhiteToLime">Accessibility</a>
+                |
+                <a href="https://www.shl.com/en/privacy/cookies/" class="nounderline link-WhiteToLime">Cookies</a>
+                |
+                <a href="https://www.shl.com/en/privacy/" class="nounderline link-WhiteToLime">Privacy Statement</a>
+                |
+                <a
+                    href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-236&hl=en"
+                    class="nounderline link-WhiteToLime">Data Protection Notice</a>
+                |<br>
+                <a href="https://www.shl.com/en/terms-of-service/" class="nounderline link-WhiteToLime">Terms of Service</a>
+                |
+                <a href='https://www.shl.com/legal/terms-and-conditions/english-uk/ ' class="nounderline link-WhiteToLime">Terms and Conditions</a>
+                |
+            </div>
+            <!-- /Links -->
+        </div>
+    </div>
+    
+</footer>
+<!-- /Footer -->		<!-- Footer -->
+		<!-- Widget -->
+<!-- Templates -->
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type='text/javascript'>
+    (function () {
+        var g = function (e, h, f, g) {
+            this.get = function (a) {
+                for (var a = a + "=", c = document.cookie.split(";"), b = 0, e = c.length; b < e; b++) {
+                    for (var d = c[b]; " " == d.charAt(0);) 
+                        d = d.substring(1, d.length);
+                    if (0 == d.indexOf(a)) 
+                        return d.substring(a.length, d.length)
+                }
+                return null
+            };
+            this.set = function (a, c) {
+                var b = "",
+                    b = new Date;
+                b.setTime(b.getTime() + 6048E5);
+                b = "; expires=" + b.toGMTString();
+                document.cookie = a + "=" + c + b + "; path=/; "
+            };
+            this.check = function () {
+                var a = this.get(f);
+                if (a) 
+                    a = a.split(":");
+                else if (100 != e) 
+                    "v" == h && (
+                        e = Math.random() >= e / 100
+                            ? 0
+                            : 100
+                    ),
+                    a = [
+                        h, e, 0
+                    ],
+                    this.set(f, a.join(":"));
+                else 
+                    return !0;
+                var c = a[1];
+                if (100 == c) 
+                    return !0;
+                switch (a[0]) {
+                    case "v":
+                        return !1;
+                    case "r":
+                        return c = a[2] % Math.floor(100 / c),
+                        a[2]++,
+                        this.set(f, a.join(":")),
+                        !c
+                }
+                return !0
+            };
+            this.go = function () {
+                if (this.check()) {
+                    var a = document.createElement("script");
+                    a.type = "text/javascript";
+                    a.src = g;
+                    document.body && document
+                        .body
+                        .appendChild(a)
+                }
+            };
+            this.start = function () {
+                var t = this;
+                "complete" !== document.readyState
+                    ? window.addEventListener
+                        ? window.addEventListener("load", function () {
+                            t.go()
+                        }, !1)
+                        : window.attachEvent && window.attachEvent("onload", function () {
+                            t.go()
+                        })
+                    : t.go()
+            };
+        };
+        try {
+            (new g(
+                100,
+                "r",
+                "QSI_S_ZN_3w4wOrWAQZP1UUu",
+                "https://zn3w4worwaqzp1uuu-shl1.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_3w4wOrWAQZP1UUu"
+            )).start()
+        } catch (i) {}
+    })();
+</script>
+<div id='ZN_3w4wOrWAQZP1UUu'>
+    <!--DO NOT REMOVE-CONTENTS PLACED HERE-->
+</div>
+<!--END WEBSITE FEEDBACK SNIPPET-->
+<!-- /Templates -->
+<!-- Side Widget -->
+<div class="widget-wrapper">
+    <!-- Open Widget Button -->
+    <div class="widget-button-section">
+        <button
+            title='Toggle Widget'
+            id="widget-button"
+            class="widget-button accordion-button widget-button-collapsed"
+            onclick="onClickWidget()"></button>
+    </div>
+    <!-- /Open Widget Button -->
+
+    <!-- Widget -->
+    <div id="widget" class="bg-shl-lime widget-section widget-collapse" style="display: none;">
+        <div class="container-sm bg-shl-lime widget-container">
+            <div class="row">
+                <!-- ContactUs and Check if Category is available -->
+                <div class="col p-0">
+                    <div class="card widget-top-card">
+                            <a
+                                href="./contactUs.html?hl=en&c=10_91_12_"
+                                class="widget-link"
+                                rel="noopener noreferrer">
+                                <div class="row-1 pt-3 widget-div">
+                                    <img
+                                        src="./assets/img/outline_contact_page_black_24dp.png"
+                                        class="card-img-top widget-img"
+                                        alt='Contact'>
+                                    <p class="widget-paragraph">
+                                        Contact Form
+                                    </p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                <!-- /ContactUs -->
+
+                <!-- Give Feedback, needs to be implemented -->
+                <div class="col p-0">
+                    <div class="card widget-card">
+                        <a id="widgetFeedbackAnker" class="widget-link" href="javascript:;" onclick="feedback()">
+                            <div class="row-1 pt-3 widget-div">
+                                <img
+                                    src="./assets/img/outline_rate_review_black_24dp.png"
+                                    class="card-img-top widget-img"
+                                    alt='Chat'>
+                                <p class="widget-paragraph">
+                                    Give Feedback
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Give Feedback -->
+
+                <!-- Scheduled Maintenance and check if Category is known -->
+                <div class="col p-0">
+                    <div class="card widget-bottom-card">
+                            <a href="schedule.html?hl=en&c=10_91_12_" class="widget-link" rel="noopener noreferrer">
+                                <div class="row-1 pt-3 widget-div">
+                                    <img
+                                        src="./assets/img/outline_event_black_24dp.png"
+                                        class="card-img-top widget-img"
+                                        alt='Calendar'>
+                                    <p class="widget-paragraph">
+                                        Scheduled Maintenance
+                                    </p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                <!-- /Scheduled Maintenance -->
+
+            </div>
+        </div>
+    </div>
+    <!-- /Widget -->
+</div>
+<!-- /Side Widget -->
+<script>
+    //Extend Widget onClick, and turn Button
+    function onClickWidget() {
+        var widget = document.getElementById("widget");
+        var button = document.getElementById("widget-button");
+        var numbers = document.getElementById("widget-numbers");
+        if (widget.style.display === "none") {
+            widget.style.display = "block";
+            button
+                .classList
+                .add("widget-button-open");
+            button
+                .classList
+                .remove("widget-button-collapsed");
+        } else {
+            widget.style.display = "none";
+            button
+                .classList
+                .remove("widget-button-phone-open");
+            button
+                .classList
+                .add("widget-button-collapsed");
+            button
+                .classList
+                .remove("widget-button-open");
+        }
+    } 
+	function feedback(evt)
+	{
+		//evt.preventDefault();
+		if( QSI && QSI.API )
+		{
+			if( QSI._repeatCall )
+			{
+				QSI.API.unload();
+				QSI.API.load().done( function() {
+				  QSI.API.run();
+				});
+			}
+			else
+			{
+				QSI._repeatCall = true;
+				QSI.API.run();
+			}
+		}
+		else
+		{
+			console.log("QSI not initialized");
+		}
+		
+		return false;
+	}
+
+    window.setTimeout(onClickWidget, 10);
+</script>
+<!-- /Java Script for Widget -->
+		<!-- /Widget -->
+	</main>	
+
+	<!-- Scripts -->
+	<script src='assets/js/browser-check.js'></script>
+	<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+	<script>
+		var specialCountries = [			
+			{cvalue: "US", dataValue: "+1-", value: "USA", label: "USA (+1)"},
+			{cvalue: "GB", dataValue: "+44", value: "GBR", label: "UK (+44)"},
+			{cvalue: "AU", dataValue: "+61", value: "AUS", label: "Australia (+61)"},
+			{cvalue: "CN", dataValue: "+86", value: "CHN", label: "China (+86)"},
+			{cvalue: "DK", dataValue: "+45", value: "DNK", label: "Denmark (+45)"},
+			{cvalue: "FI", dataValue: "+358", value: "FIN", label: "Finland (+358)"},
+			{cvalue: "FR", dataValue: "+33", value: "FRA", label: "France (+33)"},
+			{cvalue: "DE", dataValue: "+49", value: "DEU", label: "Germany (+49)"},
+			{cvalue: "IN", dataValue: "+91", value: "IND", label: "India (+91)"},
+			{cvalue: "IT", dataValue: "+39", value: "ITA", label: "Italy (+39)"},
+			{cvalue: "NL", dataValue: "+31", value: "NLD", label: "Netherlands (+31)"},
+			{cvalue: "NO", dataValue: "+47", value: "NOR", label: "Norway (+47)"},
+			{cvalue: "SE", dataValue: "+46", value: "SWE", label: "Sweden (+46)"},
+			{cvalue: "ZA", dataValue: "+27", value: "ZAF", label: "South Africa (+27)"},
+		];
+		var countries = [			
+			{cvalue: "GE", dataValue: "+995", value: "GEO", label: "Abkhazia (+995)"},
+			{cvalue: "AF", dataValue: "+93", value: "AFG", label: "Afghanistan (+93)"},
+			{cvalue: "AL", dataValue: "+335", value: "ALB", label: "Albania (+335)"},
+			{cvalue: "DZ", dataValue: "+213", value: "DZA", label: "Algeria (+213)"},
+			{cvalue: "AD", dataValue: "+376", value: "AND", label: "Andorra (+376)"},
+			{cvalue: "AO", dataValue: "+244", value: "AGO", label: "Angola (+244)"},
+			{cvalue: "AG", dataValue: "+1267", value: "ATG", label: "Antigua & Barbuda (+1267)"},
+			{cvalue: "AR", dataValue: "+54", value: "ARG", label: "Argentina (+54)"},
+			{cvalue: "AM", dataValue: "+374", value: "ARM", label: "Armenia (+374)"},
+			{cvalue: "AU", dataValue: "+61", value: "AUS", label: "Australia (+61)"},
+			{cvalue: "AT", dataValue: "+43", value: "AUT", label: "Austria (+43)"},
+			{cvalue: "AZ", dataValue: "+994", value: "AZE", label: "Azerbaijan (+994)"},
+			{cvalue: "BS", dataValue: "+1241", value: "BHS", label: "Bahamas (+1241)"},
+			{cvalue: "BH", dataValue: "+973", value: "BHR", label: "Bahrain (+973)"},
+			{cvalue: "BD", dataValue: "+880", value: "BGD", label: "Bangladesh (+880)"},
+			{cvalue: "BB", dataValue: "+1245", value: "BRB", label: "Barbados (+1245)"},
+			{cvalue: "BY", dataValue: "+375", value: "BLR", label: "Belarus (+375)"},
+			{cvalue: "BE", dataValue: "+32", value: "BEL", label: "Belgium (+32)"},
+			{cvalue: "BZ", dataValue: "+501", value: "BLZ", label: "Belize (+501)"},
+			{cvalue: "BJ", dataValue: "+229", value: "BEN", label: "Benin (+229)"},
+			{cvalue: "BT", dataValue: "+975", value: "BTN", label: "Bhutan (+975)"},
+			{cvalue: "BO", dataValue: "+591", value: "BOL", label: "Bolivia (+591)"},
+			{cvalue: "BA", dataValue: "+387", value: "BIH", label: "Bosnia Herzegovina (+387)"},
+			{cvalue: "BW", dataValue: "+267", value: "BWA", label: "Botswana (+267)"},
+			{cvalue: "BR", dataValue: "+55", value: "BRA", label: "Brazil (+55)"},
+			{cvalue: "BN", dataValue: "+673", value: "BRN", label: "Brunei (+673)"},
+			{cvalue: "BG", dataValue: "+359", value: "BGR", label: "Bulgaria (+359)"},
+			{cvalue: "BF", dataValue: "+226", value: "BFA", label: "Burkina Faso (+226)"},
+			{cvalue: "BI", dataValue: "+257", value: "BDI", label: "Burundi (+257)"},
+			{cvalue: "KH", dataValue: "+855", value: "KHM", label: "Cambodia (+855)"},
+			{cvalue: "CM", dataValue: "+237", value: "CMR", label: "Cameroon (+237)"},
+			{cvalue: "CA", dataValue: "+1", value: "CAN", label: "Canada (+1)"},
+			{cvalue: "CV", dataValue: "+238", value: "CPV", label: "Cape Verde Islands (+238)"},
+			{cvalue: "CF", dataValue: "+236", value: "CAF", label: "Central African Republic (+236)"},
+			{cvalue: "TD", dataValue: "+235", value: "TCD", label: "Chad (+235)"},
+			{cvalue: "CL", dataValue: "+56", value: "CHL", label: "Chile (+56)"},
+			{cvalue: "CN", dataValue: "+86", value: "CHN", label: "China (+86)"},
+			{cvalue: "CO", dataValue: "+57", value: "COL", label: "Colombia (+57)"},
+			{cvalue: "KM", dataValue: "+269", value: "COM", label: "Comoros (+269)"},
+			{cvalue: "CG", dataValue: "+242", value: "COG", label: "Congo (+242)"},
+			{cvalue: "CR", dataValue: "+506", value: "CRI", label: "Costa Rica (+506)"},
+			{cvalue: "CI", dataValue: "+225", value: "CIV", label: "Cote d'Ivoire (Ivory Coast) (+225)"},
+			{cvalue: "HR", dataValue: "+385", value: "HRV", label: "Croatia (+385)"},
+			{cvalue: "CU", dataValue: "+53", value: "CUB", label: "Cuba (+53)"}, 
+			{cvalue: "CY", dataValue: "+357", value: "CYP", label: "Cyprus(+357)"},
+			{cvalue: "CZ", dataValue: "+420", value: "CZE", label: "Czech Republic (+420)"},
+			{cvalue: "DK", dataValue: "+45", value: "DNK", label: "Denmark (+45)"},
+			{cvalue: "DJ", dataValue: "+253", value: "DJI", label: "Djibouti (+253)"},
+			{cvalue: "DM", dataValue: "+1766", value: "DMA", label: "Dominica (+1766)"},
+			{cvalue: "DO", dataValue: "+809", value: "DOM", label: "Dominican Republic (+809)"},
+			{cvalue: "EC", dataValue: "+593", value: "ECU", label: "Ecuador (+593)"},
+			{cvalue: "EG", dataValue: "+20", value: "EGY", label: "Egypt (+20)"},
+			{cvalue: "SV", dataValue: "+503", value: "SLV", label: "El Salvador (+503)"},
+			{cvalue: "GQ", dataValue: "+240", value: "GNQ", label: "Equatorial Guinea (+240)"},
+			{cvalue: "ER", dataValue: "+291", value: "ERI", label: "Eritrea (+291)"},
+			{cvalue: "EE", dataValue: "+372", value: "EST", label: "Estonia (+372)"},
+			{cvalue: "ET", dataValue: "+251", value: "ETH", label: "Ethiopia (+251)"},
+			{cvalue: "FJ", dataValue: "+679", value: "FJI", label: "Fiji (+679)"},
+			{cvalue: "FI", dataValue: "+358", value: "FIN", label: "Finland (+358)"},
+			{cvalue: "FR", dataValue: "+33", value: "FRA", label: "France (+33)"},
+			{cvalue: "GF", dataValue: "+594", value: "594", label: "French Guiana (+594)"},
+			{cvalue: "PF", dataValue: "+689", value: "689", label: "French Polynesia (+689)"},
+			{cvalue: "GA", dataValue: "+241", value: "GAB", label: "Gabon (+241)"},
+			{cvalue: "GM", dataValue: "+220", value: "GMB", label: "Gambia (+220)"},
+			{cvalue: "GE", dataValue: "+995", value: "GEO", label: "Georgia (+995)"},
+			{cvalue: "DE", dataValue: "+49", value: "DEU", label: "Germany (+49)"},
+			{cvalue: "GH", dataValue: "+233", value: "GHA", label: "Ghana (+233)"},
+			{cvalue: "GR", dataValue: "+30", value: "GRC", label: "Greece (+30)"},
+			{cvalue: "GD", dataValue: "+1472", value: "GRD", label: "Grenada (+1472)"},
+			{cvalue: "GT", dataValue: "+502", value: "GTM", label: "Guatemala (+502)"},
+			{cvalue: "GN", dataValue: "+224", value: "GIN", label: "Guinea (+224)"},
+			{cvalue: "GW", dataValue: "+245", value: "GNB", label: "Guinea - Bissau (+245)"},
+			{cvalue: "GY", dataValue: "+592", value: "GUY", label: "Guyana (+592)"},
+			{cvalue: "HT", dataValue: "+509", value: "HTI", label: "Haiti (+509)"},
+			{cvalue: "HN", dataValue: "+504", value: "HND", label: "Honduras (+504)"},
+			{cvalue: "HK", dataValue: "+852", value: "HKG", label: "Hong Kong (+852)"},
+			{cvalue: "HU", dataValue: "+36", value: "HUN", label: "Hungary (+36)"},
+			{cvalue: "IS", dataValue: "+354", value: "ISL", label: "Iceland (+354)"},
+			{cvalue: "IN", dataValue: "+91", value: "IND", label: "India (+91)"},
+			{cvalue: "ID", dataValue: "+62", value: "IDN", label: "Indonesia (+62)"},
+			{cvalue: "IQ", dataValue: "+964", value: "IRQ", label: "Iraq (+964)"},
+			{cvalue: "IR", dataValue: "+98", value: "IRN", label: "Iran (+98)"}, 
+			{cvalue: "IE", dataValue: "+353", value: "IRL", label: "Ireland (+353)"},
+			{cvalue: "IL", dataValue: "+972", value: "ISR", label: "Israel (+972)"},
+			{cvalue: "IT", dataValue: "+39", value: "ITA", label: "Italy (+39)"},
+			{cvalue: "JM", dataValue: "+1875", value: "JAM", label: "Jamaica (+1875)"},
+			{cvalue: "JP", dataValue: "+81", value: "JPN", label: "Japan (+81)"},
+			{cvalue: "JO", dataValue: "+962", value: "JOR", label: "Jordan (+962)"},
+			{cvalue: "KZ", dataValue: "+7", value: "KAZ", label: "Kazakhstan (+7)"},
+			{cvalue: "KE", dataValue: "+254", value: "KEN ", label: "Kenya (+254)"},
+			{cvalue: "KI", dataValue: "+686", value: "KIR", label: "Kiribati (+686)"},
+			{cvalue: "KP", dataValue: "+850", value: "PRK", label: "Korea - North (+850)"}, 
+			{cvalue: "KR", dataValue: "+82", value: "KOR", label: "Korea - South (+82)"},
+			{cvalue: "KW", dataValue: "+965", value: "KWT", label: "Kuwait (+965)"},
+			{cvalue: "KG", dataValue: "+996", value: "KGZ", label: "Kyrgyzstan (+996)"},
+			{cvalue: "LA", dataValue: "+856", value: "LAO", label: "Laos (+856)"},
+			{cvalue: "LV", dataValue: "+371", value: "LVA", label: "Latvia (+371)"},
+			{cvalue: "LB", dataValue: "+961", value: "LBN", label: "Lebanon (+961)"},
+			{cvalue: "LS", dataValue: "+266", value: "LSO", label: "Lesotho (+266)"},
+			{cvalue: "LR", dataValue: "+231", value: "LBR", label: "Liberia (+231)"},
+			{cvalue: "LY", dataValue: "+218", value: "LBY", label: "Libya (+218)"},
+			{cvalue: "LI", dataValue: "+423", value: "LIE", label: "Liechtenstein (+423)"},
+			{cvalue: "LT", dataValue: "+370", value: "LTU", label: "Lithuania (+370)"},
+			{cvalue: "LU", dataValue: "+352", value: "LUX", label: "Luxembourg (+352)"},
+			{cvalue: "MK", dataValue: "+389", value: "MKD", label: "Macedonia (+389)"},
+			{cvalue: "MG", dataValue: "+261", value: "MDG", label: "Madagascar (+261)"},
+			{cvalue: "MW", dataValue: "+265", value: "MWI", label: "Malawi (+265)"},
+			{cvalue: "MY", dataValue: "+60", value: "MYS", label: "Malaysia (+60)"},
+			{cvalue: "MV", dataValue: "+960", value: "MDV", label: "Maldives (+960)"},
+			{cvalue: "ML", dataValue: "+223", value: "MLI", label: "Mali (+223)"},
+			{cvalue: "MT", dataValue: "+356", value: "MLT", label: "Malta (+356)"},
+			{cvalue: "MH", dataValue: "+692", value: "MHL", label: "Marshall Islands (+692)"},
+			{cvalue: "MR", dataValue: "+222", value: "MRT", label: "Mauritania (+222)"},
+			{cvalue: "MU", dataValue: "+230", value: "MUS", label: "Mauritius(+230)"},
+			{cvalue: "MX", dataValue: "+52", value: "MEX", label: "Mexico (+52)"},
+			{cvalue: "FM", dataValue: "+691", value: "FSM", label: "Micronesia (+691)"},
+			{cvalue: "MD", dataValue: "+373", value: "MDA", label: "Moldova (+373)"},
+			{cvalue: "MC", dataValue: "+377", value: "MCO", label: "Monaco (+377)"},
+			{cvalue: "MN", dataValue: "+976", value: "MNG", label: "Mongolia (+976)"},
+			{cvalue: "ME", dataValue: "+382", value: "MEN", label: "Montenegro (+382)"},
+			{cvalue: "MA", dataValue: "+212", value: "MAR", label: "Morocco (+212)"},
+			{cvalue: "MZ", dataValue: "+258", value: "MOZ", label: "Mozambique (+258)"},
+			{cvalue: "MM", dataValue: "+95", value: "MMR", label: "Myanmar (+95)"},
+			{cvalue: "NA", dataValue: "+264", value: "NAM", label: "Namibia (+264)"},
+			{cvalue: "NR", dataValue: "+674", value: "NRU", label: "Nauru (+674)"},
+			{cvalue: "NP", dataValue: "+977", value: "NPL", label: "Nepal (+977)"},
+			{cvalue: "NL", dataValue: "+31", value: "NLD", label: "Netherlands (+31)"},
+			{cvalue: "NZ", dataValue: "+64", value: "NZL", label: "New Zealand (+64)"},
+			{cvalue: "NI", dataValue: "+505", value: "NIC", label: "Nicaragua (+505)"},
+			{cvalue: "NE", dataValue: "+227", value: "NER", label: "Niger (+227)"},
+			{cvalue: "NG", dataValue: "+234", value: "NGA", label: "Nigeria (+234)"},
+			{cvalue: "NO", dataValue: "+47", value: "NOR", label: "Norway (+47)"},
+			{cvalue: "OM", dataValue: "+968", value: "OMN", label: "Oman (+968)"},
+			{cvalue: "PK", dataValue: "+92", value: "PAK", label: "Pakistan (+92)"},
+			{cvalue: "PW", dataValue: "+680", value: "PLW", label: "Palau (+680)"},
+			{cvalue: "PA", dataValue: "+507", value: "PAN", label: "Panama (+507)"},
+			{cvalue: "PG", dataValue: "+675", value: "PNG", label: "Papua New Guinea (+675)"},
+			{cvalue: "PY", dataValue: "+595", value: "PRY", label: "Paraguay (+595)"},
+			{cvalue: "PE", dataValue: "+51", value: "PER", label: "Peru (+51)"},
+			{cvalue: "PH", dataValue: "+63", value: "PHL", label: "Philippines (+63)"},
+			{cvalue: "PL", dataValue: "+48", value: "POL", label: "Poland (+48)"},
+			{cvalue: "PT", dataValue: "+351", value: "PRT", label: "Portugal (+351)"},
+			{cvalue: "QA", dataValue: "+974", value: "QAT", label: "Qatar (+974)"},
+			{cvalue: "RO", dataValue: "+40", value: "ROU", label: "Romania (+40)"},
+			{cvalue: "RU", dataValue: "+7", value: "RUS", label: "Russia (+7)"},
+			{cvalue: "RW", dataValue: "+250", value: "RWA", label: "Rwanda (+250)"},
+			{cvalue: "KN", dataValue: "+1868", value: "KNA", label: "Saint Kitts and Nevis (+1868)"},
+			{cvalue: "LC", dataValue: "+1757", value: "LCA", label: "Saint Lucia (+1757)"},
+			{cvalue: "VC", dataValue: "+1783", value: "VCT", label: "Saint Vincent and the Grenadines (+1783)"},
+			{cvalue: "WS", dataValue: "+685", value: "WSM", label: "Samoa (+685)"},
+			{cvalue: "SM", dataValue: "+378", value: "SMR", label: "San Marino (+378)"},
+			{cvalue: "ST", dataValue: "+239", value: "STP", label: "Sao Tome & Principe (+239)"},
+			{cvalue: "SA", dataValue: "+966", value: "SAU", label: "Saudi Arabia (+966)"},
+			{cvalue: "SN", dataValue: "+221", value: "SEN", label: "Senegal (+221)"},
+			{cvalue: "CS", dataValue: "+381", value: "SRB", label: "Serbia (+381)"},
+			{cvalue: "SC", dataValue: "+248", value: "SYC", label: "Seychelles (+248)"},
+			{cvalue: "SL", dataValue: "+232", value: "SLE", label: "Sierra Leone (+232)"},
+			{cvalue: "SG", dataValue: "+65", value: "SGP", label: "Singapore (+65)"},
+			{cvalue: "SK", dataValue: "+421", value: "SVK", label: "Slovakia(+421)"},
+			{cvalue: "SI", dataValue: "+386", value: "SVN", label: "Slovenia (+386)"},
+			{cvalue: "SB", dataValue: "+677", value: "SLB", label: "Solomon Islands (+677)"},
+			{cvalue: "SO", dataValue: "+252", value: "SOM", label: "Somalia (+252)"},
+			{cvalue: "ZA", dataValue: "+27", value: "ZAF", label: "South Africa (+27)"},
+			{cvalue: "ES", dataValue: "+34", value: "ESP", label: "Spain (+34)"},
+			{cvalue: "SD", dataValue: "+249", value: "SDN", label: "Sudan (+249)"},
+			{cvalue: "SR", dataValue: "+597", value: "SUR", label: "Suriname (+597)"},
+			{cvalue: "SZ", dataValue: "+268", value: "SWZ", label: "Swaziland (+268)"},
+			{cvalue: "SE", dataValue: "+46", value: "SWE", label: "Sweden (+46)"},
+			{cvalue: "CH", dataValue: "+41", value: "CHE", label: "Switzerland (+41)"},
+			{cvalue: "SY", dataValue: "+963", value: "SYR", label: "Syria (+963)"}, 
+			{cvalue: "TW", dataValue: "+886", value: "TWN", label: "Taiwan (+886)"},
+			{cvalue: "TJ", dataValue: "+992", value: "TJK", label: "Tajikistan (+992)"},
+			{cvalue: "TZ", dataValue: "+255", value: "TZA", label: "Tanzania (+255)"},										
+			{cvalue: "TH", dataValue: "+66", value: "THA", label: "Thailand (+66)"},
+			{cvalue: "TL", dataValue: "+670", value: "TLZ", label: "Timor-Leste(East Timor) (+670)"},										
+			{cvalue: "TG", dataValue: "+228", value: "TGO", label: "Togo (+228)"},
+			{cvalue: "TO", dataValue: "+676", value: "TON", label: "Tonga (+676)"},
+			{cvalue: "TT", dataValue: "+1876", value: "TTO", label: "Trinidad & Tobago (+1876)"},
+			{cvalue: "TN", dataValue: "+216", value: "TUN", label: "Tunisia (+216)"},
+			{cvalue: "TR", dataValue: "+90", value: "TUR", label: "Turkey (+90)"},
+			{cvalue: "TK", dataValue: "+993", value: "TKM", label: "Turkmenistan (+993)"},
+			{cvalue: "TV", dataValue: "+688", value: "TUV", label: "Tuvalu (+688)"},
+			{cvalue: "UG", dataValue: "+256", value: "UGA", label: "Uganda (+256)"},
+			{cvalue: "GB", dataValue: "+44", value: "GBR", label: "UK (+44)"},
+			{cvalue: "UA", dataValue: "+380", value: "UKR", label: "Ukraine (+380)"},
+			{cvalue: "AE", dataValue: "+971", value: "ARE", label: "United Arab Emirates (+971)"},
+			{cvalue: "UY", dataValue: "+598", value: "URY", label: "Uruguay (+598)"},
+			{cvalue: "US", dataValue: "+1", value: "USA", label: "USA (+1)"},
+			{cvalue: "UZ", dataValue: "+998", value: "UZB", label: "Uzbekistan (+998)"},
+			{cvalue: "VU", dataValue: "+678", value: "VUT", label: "Vanuatu (+678)"},
+			{cvalue: "VA", dataValue: "+379", value: "VAT", label: "Vatican City (+379)"},
+			{cvalue: "VE", dataValue: "+58", value: "VEN", label: "Venezuela (+58)"},
+			{cvalue: "VN", dataValue: "+84", value: "VNM", label: "Vietnam (+84)"},
+			{cvalue: "YE", dataValue: "+967", value: "YEM", label: "Yemen (+967)"},
+			{cvalue: "ZM", dataValue: "+260", value: "ZMB", label: "Zambia (+260)"},
+			{cvalue: "ZW", dataValue: "+263", value: "ZWE", label: "Zimbabwe (+263)"} ];
+
+		var lookup = {
+		   'USA': ['English'],
+		   'IND': ['English'],
+		   'AUT': ['German','English'],
+		   'BEL' : ['Dutch','French','English'],
+		   'CHN' : ['English','Chinese'],
+		   'DNK' : ['Danish','English'],
+		   'FIN' : ['Finnish','English'],
+		   'FRA' : ['French', 'English'],
+		   'DEU' : ['German', 'English'],
+		   'ITA' : ['Italian','English'],
+		   'LUX' : ['French','German','English'],
+		   'MCO' : ['French','English'],
+		   'NLD' : ['Dutch','English'],
+		   'NOR' : ['Norwegian','English'],
+		   'SEN' : ['French','English'],
+		   'SWE' : ['Swedish','English'],
+		   'CHE' : ['German','French','Italian','English'],
+		   'GBR' : ['English'],
+		   'GEO' : ['None','English'],
+		   'AFG' :['None','English'],
+		   'ALB' :['English'],
+		   'DZA' :['English'], 
+		};
+
+		function recaptchaCallback() {
+			return new Promise(function (resolve, reject) {
+				console.log("Response: " + grecaptcha.getResponse());
+        		if (grecaptcha.getResponse() !== "") {
+            		document.getElementById('btnSubmit').captcha=true;
+				} else {
+					document.getElementById('btnSubmit').captcha=false;
+				}
+			});
+		}
+
+		function trimText(p_str)
+		{
+			var l_str = p_str;
+			if (l_str && (typeof l_str === 'string' || l_str instanceof String)) {
+				l_str = l_str.trim();
+			}
+			return l_str;
+		}
+
+		(function () {
+			document.getElementById('btnSubmit').captcha=false;
+			function submitForm(evt) {
+
+				console.log("Start to Submit form");
+
+				evt=evt||window.event;
+				evt.preventDefault();
+
+				this.classList.add('was-validated')
+
+				if (!this.checkValidity()) {
+					console.log("Form not valid!");		
+					evt.stopPropagation();
+					return;
+				} 
+				
+				document.getElementById('btnSubmit').disabled = true;
+
+				if( this.elements['fldEmail'] ) {
+					var emailConfirmField = document.getElementById('fldConfirmEmail');
+					var email = this.elements['fldEmail'].value;
+					var confirmEmail = this.elements['fldConfirmEmail'].value;
+					if(email !== confirmEmail) {
+						var feedback = emailConfirmField.parentElement.querySelectorAll('.invalid-feedback')[0];
+						feedback.innerHTML = 'E-Mails should match!';
+						feedback.classList.add('is-invalid');
+						emailConfirmField.classList.add('is-invalid');
+						evt.stopPropagation();
+						return;
+					} else {
+						emailConfirmField.classList.remove('is-invalid');
+						emailConfirmField.parentElement.querySelectorAll('.invalid-feedback')[0].classList.remove('is-invalid');
+					}
+				}
+				
+				var recaptchaFeedback = document.getElementById('fldCaptcha_feedback');
+			
+				var recaptcha = grecaptcha.getResponse() != "";
+				if (recaptcha != true) {
+					recaptchaFeedback.classList.add('is-invalid', 'd-block');
+					evt.stopPropagation();
+					return;
+				} else {
+					recaptchaFeedback.classList.remove('is-invalid', 'd-none');
+				}
+
+				var formData = new FormData();
+				
+				if( this.elements['fldCallerType'] ) { formData.append( "00N20000001lcTT", this.elements['fldCallerType'].value ); }
+				if( this.elements['fldAddEnquiryDetails'] ) { formData.append( "00ND00000069p6z", this.elements['fldAddEnquiryDetails'].value ); }
+				if( this.elements['fldTypeOfEnquiry'] ) { formData.append( "00ND00000069p73", this.elements['fldTypeOfEnquiry'].value ); }
+				
+				var fldSystemUsedValDefault = "None";
+				var fldSystemUsedVal = fldSystemUsedValDefault;
+				if( this.elements['fldSystemUsed'] ){ 
+					var val = trimText(this.elements['fldSystemUsed'].value);
+					if( val === '' || val === 'undefined' )
+					{
+						//if( 'candidate' === this.elements['fldCallerType'].value )
+						{
+							val = fldSystemUsedValDefault;
+						}
+					}
+					formData.append( "00ND00000069p76", val );
+					fldSystemUsedVal = val;
+				}
+				else
+				{
+					//if( 'candidate' === this.elements['fldCallerType'].value )
+					{
+						formData.append( "00ND00000069p76", fldSystemUsedValDefault );
+					}
+				}
+
+				var name = this.elements['fldFirstName'].value + ' ' +  this.elements['fldLastName'].value;			
+				if( 'candidate' === this.elements['fldCallerType'].value )
+				{
+					formData.append( "00N20000000inkK", name );	//Candidate route
+					
+					if( this.elements['fldPhone'] ) { formData.append( "00N200000029uH3", this.elements['fldPhone'].value ); }
+					if( this.elements['fldEmail'] ){ formData.append( "00ND0000002gU6Y", this.elements['fldEmail'].value ); }
+				}
+				else
+				{
+					formData.append( "00N20000000io8V", name );	//Client route
+					
+					if( this.elements['fldPhone'] ) { formData.append( "00N20000000in7C", this.elements['fldPhone'].value ); }
+					if( this.elements['fldEmail'] ){ formData.append( "00N20000000in79", this.elements['fldEmail'].value ); }					
+				}
+				
+				if( this.elements['fldCountryRegion'] ) { formData.append( "00ND0000005D3ij", this.elements['fldCountryRegion'].value ); }
+				if( this.elements['fldPrefLang'] ) { formData.append( "00ND00000069p74", this.elements['fldPrefLang'].value ); }
+				if( this.elements['fldUsernameDNumber'] ) { formData.append( "00N20000000ilv7", this.elements['fldUsernameDNumber'].value ); }
+				//if( this.elements['fldPhone'] ) { formData.append( "00N200000029uH3", this.elements['fldPhone'].value ); }
+				//if( this.elements['fldEmail'] ){ formData.append( "00ND0000002gU6Y", this.elements['fldEmail'].value ); }
+			
+				var descr = [];
+
+				if( this.elements['fldMoreDetails'] ) { descr.push('More Details: ' + trimText(this.elements['fldMoreDetails'].value) ); }
+				if( this.elements['fldTestLink'] ) { descr.push("Test Link: " +  trimText(this.elements['fldTestLink'].value) ); }
+				if( this.elements['fldErrorDetails'] ) { descr.push("Error details: " + trimText(this.elements['fldErrorDetails'].value) ); }
+				if( this.elements['fldCompany']) { descr.push("Company: " + trimText(this.elements['fldCompany'].value));}
+				if( this.elements['fldTypeOfEnquiry'] ) { descr.push("Enquiry type: " + trimText(this.elements['fldTypeOfEnquiry'].value) ); }
+				if( this.elements['fldSystemUsed'] )
+				{
+					descr.push("System used: " + fldSystemUsedVal ); }
+				else
+				{
+					descr.push("System used: " + fldSystemUsedVal );
+				}
+
+				if( this.elements['fldUsernameAssLink'] ) { descr.push("Assessment Link: " + trimText(this.elements['fldUsernameAssLink'].value) ); }
+				if( this.elements['fldUrl']  ){ descr.push("Url: " + trimText( this.elements['fldUrl'].value ) ); }
+				//if( this.elements['fldUsernameDNumber'] ) { descr.push("Username/D Number: " + trimText( this.elements['fldUsernameDNumber'].value) ); }
+				if( this.elements['fldBrowserCheckData'])
+				{
+					try {
+				    	var l_checkResult = JSON.parse( trimText(this.elements['fldBrowserCheckData'].value) );
+						Object.keys(l_checkResult).forEach(function(key,index) {
+							try{ descr.push(key + ": " + trimText(l_checkResult[key])); }catch(e){}
+						});					
+						//descr.push("BrowserCheck: " + trimText(this.elements['fldBrowserCheckData'].value) );
+					} catch(i){}
+				}
+
+				if (window.attachmentData) {
+					formData.append('00NQ4000003CwHp', window.attachmentData.body);
+					formData.append('00NQ4000003CwHq', window.attachmentData.name);
+				}
+
+				formData.append( "description", descr.join('\n') );
+
+				//formData.append( "orgid", '00D0C0000000oeM' );
+				formData.append( "orgid", '00D2000000008g1' );
+				formData.append( "external", '1' );
+				formData.append( "debug", '1' );
+				formData.append("Submitted_From__c", "Main website");
+				//console.log("Send this data string to server: %s", new URLSearchParams(formData).toString());
+				
+				var salesforceUrl = 'https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8';
+				
+				if( 'fetch' in window )
+				{
+					fetch( salesforceUrl, {
+						headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+						method: 'POST',
+						mode: 'no-cors',
+						//credentials: 'include',
+						body: new URLSearchParams(formData)
+					}).then( data => {
+						console.log(data);
+						document.getElementById('welcomeSec').style.display = "block";
+						document.getElementById('contactSec').style.display = 'none';						
+					}).catch(error => {
+						console.error('Error:', error);
+						document.getElementById('welcomeSec').style.display = "block";
+						document.getElementById('contactSec').style.display = 'none';
+					});
+				}
+				else				
+				{
+					var xhr = new XMLHttpRequest();			
+					xhr.onreadystatechange = function() {
+					  if (xhr.readyState == 3) {
+						// loading
+					  }
+					  if (xhr.readyState == 4) {
+						console.log("Formular send with status: ", xhr.status); 
+						document.getElementById('welcomeSec').style.display = "block";
+						document.getElementById('contactSec').style.display = 'none';
+					  }
+					};				
+												
+					xhr.open( "POST", salesforceUrl );
+					xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");					
+					xhr.send( new URLSearchParams(formData) );
+				}
+			}
+	
+			function addHeadline(parent, text) {
+				var row = document.createElement('div');
+				row.classList.add('row', 'pt-3');
+
+				var headline = document.createElement('h2');
+				headline.classList.add('h5');
+				headline.insertAdjacentHTML('afterbegin', text);
+
+				row.appendChild(headline);
+				
+				parent.appendChild(row);
+			}
+
+			// id, name, type, label, required, feedback, placeholder, accept
+			function addNewInput(parent, config)
+			{
+				var row = document.createElement('div');
+				row.classList.add('row', 'pt-2');
+				row.setAttribute('data-id', config.id);
+				if( config.hasOwnProperty('visible') && !config.visible ) {
+					row.style.display = 'none';
+				}
+				
+				var label = document.createElement('label');
+				label.classList.add('col-sm-4', 'col-form-label');
+				label.setAttribute('for', config.id);
+				if( config.label && config.type !== 'submit') {
+					label.insertAdjacentHTML('afterbegin', config.label);
+				}
+				if( config.required ) {
+					label.insertAdjacentHTML('afterbegin', '<svg class="icon" focusable="false"><use xlink:href="#required"></use></svg> ');
+				} else {
+					label.insertAdjacentHTML('afterbegin', '<svg class="icon" focusable="false" style="visibility: hidden"><use xlink:href="#required"></use></svg> ');
+				}
+				
+				if (config.labelHint) {
+					var labelHint = document.createElement("div");
+					labelHint.textContent = config.labelHint;
+					labelHint.classList.add("label-hint");
+					label.appendChild(labelHint);
+				}
+
+				var container = document.createElement('div');
+				container.classList.add('col-sm-8');
+
+				if( config.type && config.type === 'select' ) {
+					var input = document.createElement('select');
+					input.classList.add('form-select');
+					if( config.options ) {
+						for( var i=0, n=config.options.length; i<n; i++ ) {
+							var opt = document.createElement('option');						
+							if( config.options[i].isPlaceholder ) {
+								opt.value = "";
+								opt.setAttribute('disabled', 'disabled');
+								opt.setAttribute('selected', 'selected');
+							} else if( config.options[i].isDelimiter ) {
+								opt.value = "";
+								opt.setAttribute('disabled', 'disabled');
+							} else {
+								opt.value = config.options[i].value;
+								if( config.options[i].dataValue ) {
+									opt.setAttribute('data-value', config.options[i].dataValue);
+								}
+							}
+							opt.text = config.options[i].label;
+							input.appendChild( opt );
+						}
+					}
+				}
+			
+				else if( config.type && config.type === 'submit' ) {
+					var input = document.createElement('input');
+					input.setAttribute('type', 'submit');
+					input.value = config.label;
+				}
+				else if( config.type && config.type === 'textarea' ) {
+					var input = document.createElement('textarea');
+					input.classList.add('form-control');
+				}
+				else if( config.type && config.type === 'tel' ) {
+					var input = document.createElement('input');
+					input.classList.add('form-control');
+					input.setAttribute('type', (config.type)?config.type:'tel');
+				}
+				else if (config.type && config.type === "file") {
+					var input = document.createElement("input");
+					input.classList.add("form-control");
+					input.setAttribute("type", "file");
+					if (config.accept) {
+						input.setAttribute("accept", config.accept);
+					}
+				}
+				else {
+					var input = document.createElement('input');
+					input.classList.add('form-control');
+					input.setAttribute('type', (config.type)?config.type:'text');
+				}
+				
+				input.setAttribute('id', config.id);
+				input.setAttribute('name', (config.name)?config.name:config.id);
+				if( config.placeholder ) {
+					input.setAttribute('placeholder', config.placeholder);
+				}
+
+				if( config.eventHandler ) {
+					for( var i=0, n=config.eventHandler.length; i<n; i++ ) {
+						input.addEventListener(config.eventHandler[i].event, config.eventHandler[i].handler);
+					}
+				}
+				if( config.readonly ) {
+					input.setAttribute('readonly', 'readonly');
+				}
+				
+
+				container.appendChild( input );
+
+				if (config.hint) {
+					var feedback = document.createElement('div');
+					feedback.classList.add('rule');
+					feedback.insertAdjacentHTML('afterbegin',config.hint);
+					container.appendChild( feedback );
+				}
+				if (config.rule) {
+					if (config.rule == "minCharacter") {
+						var feedback = document.createElement('div');
+						feedback.classList.add('rule');
+						feedback.insertAdjacentHTML('afterbegin', 'Minimum of 50 characters');
+						var counter = document.createElement('span');
+						counter.classList.add('float-right');
+						feedback.appendChild( counter );
+						container.appendChild( feedback );
+						input.setAttribute('minlength', 50);
+						input.addEventListener('input', function(){ counter.innerHTML=this.value.length; });
+					}else if (config.rule == "phone") {
+						input.setAttribute('pattern', "[\+](?:[0-9] ?|-?){6,14}[0-9]");
+						input.setAttribute('placeholder', "+xx xxxxx");
+					}
+				}
+				if( config.required ) {
+					input.setAttribute('required', config.required);
+
+					var feedback = document.createElement('div');
+					feedback.classList.add('invalid-feedback');
+					feedback.insertAdjacentHTML('afterbegin', config.feedback);
+
+					container.appendChild( feedback );
+				}
+				if (config.type && config.type === "file") { 
+					var feedback = document.createElement('div');
+					feedback.id = config.id + "_error";
+					feedback.classList.add('invalid-feedback');
+					container.appendChild( feedback );	
+				}
+
+				row.appendChild( label );
+				row.appendChild( container );
+
+				parent.appendChild( row );
+
+				return input;
+			}
+
+			function removeChildsAfterMe( inputField ) {
+				var dynamicPart = document.getElementById('dynamicPart');
+				if( dynamicPart.lastChild ) {
+					while (dynamicPart.lastChild.getAttribute('data-id') !== inputField.id) {
+						dynamicPart.removeChild(dynamicPart.lastChild);
+						if( dynamicPart.lastChild == null ) {
+							break;
+						}
+					}
+				}
+			}
+
+			function getSelectedOption( selectField ) {
+				var selectedIndex = selectField.selectedIndex;
+				if( selectedIndex == -1 ) {				
+					return null;
+				}
+
+				var selectedOption = selectField.options[selectedIndex];
+				if(selectedOption.getAttribute('disabled') ) {				
+					return null;
+				}			
+
+				return selectedOption;
+			}
+
+			function onChangeCallerType(evt) {
+				evt.preventDefault();
+
+				var selectedOption = getSelectedOption(this);
+				if(selectedOption == null ) {
+					evt.stopPropagation();
+					return;
+				}
+
+				removeChildsAfterMe( this );
+
+				var selectedValue = selectedOption.getAttribute('data-value');
+				if( 'caf' === selectedValue ) {
+					createCandidateFlow();
+				} else if('clf' === selectedValue) {
+					createClientFlow();
+				}
+			}
+
+			function createBrowserCheck() {
+				var dynamicPart = document.getElementById('dynamicPart');
+				addNewInput(dynamicPart, {id: 'fldBrowserCheckData', label: 'BrowserCheckData', readonly: "true", visible: false});
+				var browserCheckInput = document.getElementById('fldBrowserCheckData');
+				browserCheckInput.value = JSON.stringify(getBrowserData());
+					
+			}
+
+			function createContactDetails(phoneRequired, dNumberRequired, clientFlow) {
+				var onChangePhone = function(evt) {
+					if (evt.target.value.startsWith("+1") && evt.inputType === "insertText" && evt.target.value.length < 16) {
+					let input = evt.target.value.replace(/\D/g, '').slice(1);
+					if (input.length > 0) {
+						input = `+1-${input}`; 
+						if (input.length > 6 && input.length <= 9) {
+							input = `${input.slice(0, 6)}-${input.slice(6)}`;
+						} else if (input.length > 9) {
+							input = `${input.slice(0, 6)}-${input.slice(6, 9)}-${input.slice(9)}`;
+						}
+					} else {
+						input = "+1-";
+					}
+					evt.target.value = input;
+					} else if (evt.target.value.startsWith("+1") && evt.target.value.length > 15 ) {
+						evt.target.value = evt.target.value.slice(0, 15);
+					}
+				}
+				var onChangeCountry = function(evt) {
+					evt.preventDefault();
+
+					var selectedOption = getSelectedOption(this);
+					if(selectedOption == null ) {
+						evt.stopPropagation();
+						return;
+					}
+					
+					var cnty_code = selectedOption.getAttribute('data-value');
+					var selectValue = this.value;
+					var fldPhoneEle = document.getElementById('fldPhone');
+					fldPhoneEle.placeholder = cnty_code + " xxxxx"
+					if (fldPhoneEle.required) {
+						fldPhoneEle.value = cnty_code;
+					}
+					
+				
+					var combo = document.getElementById('fldPrefLang');
+					// Empty the target field
+					while (combo.options.length > 0) {                
+						combo.remove(0);
+					}
+							
+					if(lookup.hasOwnProperty(selectValue)){
+						// For each chocie in the selected option
+						for (i = 0; i < lookup[selectValue].length; i++) {
+							// Output choice in the target field
+							combo.add( new Option(lookup[selectValue][i], lookup[selectValue][i]) );
+						}
+					} else {
+						combo.add( new Option('English', 'English') );
+					}				
+				}
+
+				var dynamicPart = document.getElementById('dynamicPart');
+
+				addHeadline( dynamicPart, 'Your Details' );
+
+				addNewInput( dynamicPart, {id: 'fldFirstName', label: 'First Name:', required: true, feedback: 'Input Required'} );
+				addNewInput( dynamicPart, {id: 'fldLastName', label: 'Last Name:', required: true, feedback: 'Input Required'} );
+				if (clientFlow) {
+					addNewInput( dynamicPart, {id: 'fldCompany', label: 'Company Name:', required: true, feedback: 'Input Required'});
+				} else {
+					addNewInput( dynamicPart, {id: 'fldCompany', label: 'Name of company you are taking a test for:', required: true, feedback: 'Input Required'});
+				}
+				addNewInput( dynamicPart, {type: 'select', id: 'fldCountryRegion', label: 'Country\/Region:', required: true, feedback: 'Please choose one',
+					options: [].concat(
+						{value: "", label: 'Please choose one', isPlaceholder: true},
+						specialCountries,
+						{value: "", label: '------------------------', isDelimiter: true},
+						countries),
+					eventHandler: [ {event: 'change', handler: onChangeCountry} ]
+				});
+				addNewInput( dynamicPart, {type: 'select', id: 'fldPrefLang', label: 'Preferred Language:', required: true, feedback: 'Please choose one',
+					options: [{label: 'Please choose one', isPlaceholder: true}] 
+				});
+				if (dNumberRequired) {
+					addNewInput( dynamicPart, {id: 'fldUsernameDNumber', label: 'Username\/D Number:', required: false, feedback: 'Input Required'} );
+				} else {
+					addNewInput( dynamicPart, {id: 'fldUsernameDNumber', label: 'Username:', required: false, feedback: 'Input Required'} );
+				}
+				addNewInput( dynamicPart, {id: 'fldPhone', label: 'Telephone Number:',rule: "phone", required: (phoneRequired)?true:false, feedback: 'Input Required', eventHandler: [ {event: 'input', handler: onChangePhone}]} );
+				addNewInput( dynamicPart, {id: 'fldEmail', label: 'E-mail Address:', type: 'email', required: true, feedback: 'Input Required'} );
+				addNewInput( dynamicPart, {id: 'fldConfirmEmail', label: 'Confirm E-mail Address:', type: 'email', required: true, feedback: 'Input Required'} );
+				addNewInput( dynamicPart, {id: "fldFileInput", label: 'Supporting   Attachment  ', type: 'file', required: false, accept: ".jpeg, .png", hint:  'Upload File (Max 70 KB)  Types of File Supported: PNG, JPEG ', labelHint:  'Please do not upload files containing personal data or confidential information  ',eventHandler: [{event: 'change', handler: validateFileSize}]});
+			}
+
+			function createCandidateFlow() {
+				var onChangeHowCanWeHelp = function(evt) {
+					evt.preventDefault();
+
+					var selectedOption = getSelectedOption(this);
+					if(selectedOption == null ) {
+						evt.stopPropagation();
+						return;
+					}
+
+					var isFirstTime = this.hasOwnProperty('firsttime')?this.firsttime:true;
+					this.firsttime = false; 
+
+					var showErrorDetails = 'error' === selectedOption.getAttribute('data-value');
+
+					var dynamicPart = document.getElementById('dynamicPart');
+
+				if( isFirstTime ) {
+						addNewInput( dynamicPart, {id: 'fldErrorDetails', label: 'Error Message (if visible):', visible: showErrorDetails} );
+						addNewInput( dynamicPart, {id: 'fldMoreDetails',label: 'Please provide more information:',rule: 'minCharacter', type: 'textarea', required: true, feedback: 'Input Required'} );
+						addNewInput( dynamicPart, {id: 'fldTestLink', label: 'Please paste your username and\/or the test link from the e-mail you received here:', required: true, feedback: 'Input Required'} );
+
+						createContactDetails(true, false, false);
+						createBrowserCheck();
+						//addNewInput( dynamicPart, {id: 'btnSendButton', label: 'Send', type: 'submit'} );
+						document.getElementById('staticPart').style.display = '';
+					} else {						
+						var eles = dynamicPart.querySelectorAll("[data-id='fldErrorDetails']");
+						for( var i=0, n=eles.length; i<n; i++ ) {
+							eles[i].style.display= showErrorDetails?'':'none';
+						}
+					}
+				}
+
+				var dynamicPart = document.getElementById('dynamicPart');
+
+				addHeadline( dynamicPart, 'Why are you contacting us?' );
+
+				addNewInput( dynamicPart, {type: 'select', id: 'fldAddEnquiryDetails', label: 'How can we help?', required: true, feedback: 'Please choose an option.',
+						options: [
+						{label: '--Please choose one--', isPlaceholder: true},
+						{label: 'Login issue', value: 'Login Issue'},
+						{label: 'System compatibility', value: 'System Compatibility'},
+						{label: 'Test status enquiry', value: 'Test Status Enquiry'},
+						{label: 'Disability enquiry', value: 'Disability Enquiry'},
+						{label: 'Test issue', value: 'Issue during a test'},
+						{label: 'I\'m getting an error', value: 'I\'m getting an error', dataValue: 'error'},
+						{label: 'Other, please specify:', value: 'Other, Please Specify'}],
+					eventHandler: [ {event: 'change', handler: onChangeHowCanWeHelp} ]
+				} );
+			}
+
+			function createClientFlow() {
+				var systemUsedOptions = [
+						{label: 'Please choose one', isPlaceholder: true, value: 'none'},				
+						{label: 'iAssess\/AMCAT', value: 'iAssess/AMCAT'},
+						{label: 'Insights', value: 'Insights'},
+						{label: 'Leader Edge', value: 'Leader Edge'},
+						{label: 'Multi-rater Feedback System (MFS)', value: 'Multirater Feedback System (MFS)'},
+						{label: 'SelectionSage', value: 'SelectionSage'},
+						{label: 'SHL Online', value: 'SHL Online'},
+						{label: 'TalentCentral\u2122\t\t', value: 'TalentCentralTM'},
+						{label: 'TalentCentral+\u2122', value: 'TalentCentralplusTM'},
+						{label: 'Other, please specify:', value: 'Other, please specify'}];
+
+				var renderClientPbSubFlow = function() {
+					removeChildsAfterMe( this );
+					var onChangeHowCanWeHelpPb = function(evt) {
+						evt.preventDefault();
+
+						var selectedOption = getSelectedOption(this);
+						if(selectedOption == null ) {
+							evt.stopPropagation();
+							return;
+						}
+
+						var isFirstTime = this.hasOwnProperty('firsttime')?this.firsttime:true;
+						this.firsttime = false; 
+
+						var showAssLink = 'candidate' === selectedOption.getAttribute('data-value');
+						var showSystemUsed = showAssLink || 'system' === selectedOption.getAttribute('data-value');
+
+						if( isFirstTime ) {
+							var ipf = addNewInput( dynamicPart, {id: 'fldUsernameAssLink', label: 'Please paste the candidate username or assessment link here:',required: true, visible: showAssLink} );
+							if( !showAssLink ) { ipf.removeAttribute('required'); }
+							var ipf = addNewInput( dynamicPart, {id: 'fldSystemUsed', label: 'What system are you using?', required: true, visible: showSystemUsed, type: 'select', options : systemUsedOptions,feedback: 'Input Required'} );
+							if( !showSystemUsed ) { ipf.removeAttribute('required'); }
+
+							addNewInput( dynamicPart, {id: 'fldMoreDetails', label: 'Please provide more information:', rule: 'minCharacter', type: 'textarea', required: true, feedback: 'Input Required'} );							
+
+							createContactDetails(true, true, true);
+							createBrowserCheck();
+							//addNewInput( dynamicPart, {id: 'btnSendButton', label: 'Send', type: 'submit'} );
+							document.getElementById('staticPart').style.display = '';
+						} else {
+							var eles = dynamicPart.querySelectorAll("[data-id='fldUsernameAssLink']");
+							for( var i=0, n=eles.length; i<n; i++ ) {
+								eles[i].style.display= showAssLink?'':'none';
+								var ipf = eles[i].querySelector('#fldUsernameAssLink');
+								if( ipf ) { if(showAssLink) ipf.setAttribute('required', ''); else ipf.removeAttribute('required'); }
+							}
+							eles = dynamicPart.querySelectorAll("[data-id='fldSystemUsed']");
+							for( var i=0, n=eles.length; i<n; i++ ) {
+								eles[i].style.display= showSystemUsed?'':'none';
+																var ipf = eles[i].querySelector('#fldSystemUsed');
+								if( ipf ) { if(showSystemUsed) ipf.setAttribute('required', ''); else ipf.removeAttribute('required'); }
+							}						
+						}
+					}
+
+					addNewInput( dynamicPart, {type: 'select', id: 'fldAddEnquiryDetails', label: 'How can we help?', required: true, feedback: 'Please choose an option.',
+						options: [
+							{label: '--Please choose one--', isPlaceholder: true},
+							{label: 'Product', value: 'Product'},
+							{label: 'Billing', value: 'Billing'},
+							{label: 'Order', value: 'Order'},
+							{label: 'System', value: 'Systems related', dataValue: 'system'},
+							{label: 'Training', value: 'Training'},
+							{label: 'Candidate', value: 'Candidate', dataValue: 'candidate'},
+							{label: 'Other, please specify:', value: 'Other, Please Specify'}],
+						eventHandler: [ {event: 'change', handler: onChangeHowCanWeHelpPb} ]
+					} );
+				}
+
+				var renderClientTqSubFlow = function() {
+					removeChildsAfterMe( this );
+					var onChangeHowCanWeHelpTq = function(evt) {
+						evt.preventDefault();
+
+						var selectedOption = getSelectedOption(this);
+						if(selectedOption == null ) {
+							evt.stopPropagation();
+							return;
+						}
+
+						var isFirstTime = this.hasOwnProperty('firsttime')?this.firsttime:true;
+						this.firsttime = false;
+
+						var showErrorDetails = 'error' === selectedOption.getAttribute('data-value');
+
+						if( isFirstTime ) {
+							addNewInput( dynamicPart, {id: 'fldErrorDetails', label: 'Error Message (if visible):', visible: showErrorDetails} );
+							addNewInput( dynamicPart, {id: 'fldMoreDetails', label: 'Please provide more information:', rule: 'minCharacter', type: 'textarea', required: true, feedback: 'Input Required'} );							
+							addNewInput( dynamicPart, {id: 'fldUrl', label: 'What is the link\/URL youre having issues with?', required: true, feedback: 'Input Required'} );							
+							addNewInput( dynamicPart, {id: 'fldSystemUsed', label: 'What system are you using?', type: 'select', options : systemUsedOptions, required: true, feedback: 'Input Required'} );							
+
+							createContactDetails(true, true, true);
+							createBrowserCheck();
+							//addNewInput( dynamicPart, {id: 'btnSendButton', label: 'Send', type: 'submit'} );
+							document.getElementById('staticPart').style.display = '';
+						} else {
+							var eles = dynamicPart.querySelectorAll("[data-id='fldErrorDetails']");
+							for( var i=0, n=eles.length; i<n; i++ ) {
+								eles[i].style.display= showErrorDetails?'':'none';
+							}
+						}						 					
+					}
+
+					addNewInput( dynamicPart, {type: 'select', id: 'fldAddEnquiryDetails', label: 'How can we help?', required: true, feedback: 'Please choose an option.',
+							options: [
+							{label: '--Please choose one--', isPlaceholder: true},
+							{label: 'Login issue', value: 'Login Issue'},
+							{label: 'Registration issue', value: 'Registration Issue'},
+							{label: 'System issue', value: 'System_Issue'},
+							{label: 'General enquiry', value: 'General Enquiry'},
+							{label: 'Timer extension required', value: 'Timer Extension Required'},
+							{label: 'Result generation issue', value: 'Results Generation Issue'},
+							{label: 'I\'m getting an error', value: 'I\'m getting an error', dataValue: 'error'},
+							{label: 'Other, please specify:', value: 'Other, Please Specify'}],
+						eventHandler: [ {event: 'change', handler: onChangeHowCanWeHelpTq} ]
+					} );			
+				}
+
+				var onChangeQueryType = function(evt) {
+					evt.preventDefault();
+
+					var selectedOption = getSelectedOption(this);
+					if(selectedOption == null ) {
+						evt.stopPropagation();
+						return;
+					}
+
+					switch( selectedOption.getAttribute('data-value') ) {
+						case 'clf_pb': {
+							renderClientPbSubFlow.call(this);
+							break;
+						}
+						case 'clf_tq': {
+							renderClientTqSubFlow.call(this);
+							break;
+						}
+					}
+				}
+
+				addHeadline( dynamicPart, 'Why are you contacting us?' );
+
+				addNewInput( dynamicPart, {type: 'select', id: 'fldTypeOfEnquiry', label: 'Please choose one:', required: true, feedback: 'Please choose an option.',
+						options: [
+						{label: 'Please choose one', isPlaceholder: true},
+						{label: 'Product, billing or order enquiry', value: 'Product, billing or ordering query', dataValue: 'clf_pb'},
+						{label: 'Technical support enquiry', value: 'Technology related questions or issue', dataValue: 'clf_tq'}],
+					eventHandler: [ {event: 'change', handler: onChangeQueryType} ]
+				} );
+			}
+
+		function validateFileSize(event) {
+			const input = event.target;
+			const errorField = document.getElementById(input.id + "_error");
+			const maxSize = 70 * 1024; // 70KB in bytes
+			const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg']; // Note: some browsers use 'image/jpg'
+			const file = input.files[0];
+			console.log(file);
+			console.log(input);
+			let errorMessage = '';
+			
+			if (file) {
+				// Check file type first
+				if (!allowedTypes.includes(file.type.toLowerCase())) {
+					errorMessage = 'Error: Not supported type of file: PNG, JPEG  ';
+				}
+				// Check file size
+				else if (file.size > maxSize) {
+					errorMessage = 'Error: Maximum file attachment limit exceeded  ';
+				}
+			}
+			
+			if (errorMessage) {
+				input.setCustomValidity(errorMessage);
+				errorField.textContent = errorMessage;
+				// Clear any previously stored attachment data
+				window.attachmentData = null;
+			} else {
+				input.setCustomValidity(''); // Clear any previous error
+				errorField.textContent = ''; // Clear the custom error display
+				
+				// File passed validation - read it for later use
+				if (file) {
+					const reader = new FileReader();
+					reader.addEventListener("load", function(evt) {
+						// Store the file data for later use
+						window.attachmentData = {
+							body: evt.target.result,
+							name: file.name
+						};
+						console.log('File ready for upload:', file.name);
+					});
+					reader.readAsDataURL(file);
+				} else {
+					// No file selected
+					window.attachmentData = null;
+				}
+			}
+			
+			input.reportValidity();
+		}
+			var dynamicPart = document.getElementById('dynamicPart');
+			dynamicPart.innerHTML = '';
+			
+			var staticPart = document.getElementById('staticPart');
+			staticPart.style.display = 'none';
+    		
+			var contactForm = document.getElementById('contactForm');
+			contactForm.addEventListener("submit", submitForm);
+			
+			 addNewInput( dynamicPart, {type: 'select', id: 'fldCallerType', label: 'Please choose one of the following:', required: true, feedback: 'Please choose an option.',
+                options: [{isPlaceholder: true, label: 'Please choose one'},{label: 'I\'m a candidate taking a test', value:'candidate', dataValue: 'caf'},{label: 'I\'m a client', value:'Customer', dataValue: 'clf'}],
+                    eventHandler: [ {event: 'change', handler: onChangeCallerType} ]
+            } );
+		})();	
+	</script>
+	<!-- /Scripts -->
+	</body>
+</html>	

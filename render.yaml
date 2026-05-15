@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: shl-assessment-recommender
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # Set this in Render dashboard
+      - key: LOG_LEVEL
+        value: INFO
+      - key: CATALOG_PATH
+        value: data/processed/catalog.json
+      - key: FAISS_INDEX_PATH
+        value: data/faiss/index.faiss
+    plan: starter  # Upgrade to standard for production

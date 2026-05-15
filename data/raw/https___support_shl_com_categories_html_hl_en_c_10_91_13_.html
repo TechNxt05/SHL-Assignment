@@ -1,0 +1,2189 @@
+<!doctype html>
+
+
+
+
+<!-- HTML Code -->
+<html lang="en">
+
+    <!-- Head -->
+    <head>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPN5KFD');
+</script>
+<!-- End Google Tag Manager -->        <!-- Title -->
+        <title>Help Center</title>
+        <!-- /Title -->
+
+        <!-- Templates -->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<!-- /Meta -->
+
+<!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./assets/custom_css/custom.css" rel="stylesheet">
+<link href="./assets/custom_css/document.css" rel="stylesheet">
+<!-- /Bootstrap core CSS -->
+
+<!-- Bootstrap Icons -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="shortcut icon" type="image/png" href="./assets/img/favicon-32.png" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- /Bootstrap Icons -->
+
+<!-- Bootstrap Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<!-- /Bootstrap Font -->
+
+<!-- Scripts -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+<!-- /Scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="34466d9c-a30f-4341-82cc-bfb2ce498814" type="text/javascript" async></script>
+
+        <!-- /Templates -->
+
+        <!-- Style -->
+        <style>
+            a,
+            h3 {
+                color: #6d6c6e;
+                text-decoration: none;
+            }
+        </style>
+        <!-- Style -->
+    </head>
+    <!-- /Head -->
+
+    <!-- Body -->
+    <body class="bg-shl-grey-tint3">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPN5KFD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->        <!-- Header -->
+        <!--CLIENT BANNER-->
+        <header>
+			<a href="index.html?hl=en" title="Home">
+				<img src="./assets/img/shl-logo-reverse-color.png" class="logo" alt='SHL-Logo'>
+			</a>
+            <img src="./assets/img/support-client-photo-cluster.png" class="cluster" role="presentation" alt='Photo Cluster'>
+            <h1 id="title"><img src="./assets/img/marigold-lozenge.png" class="lozenge" role="presentation" alt='Lozenge'><br/>Client Support</h1>
+        </header>
+        <!--END CLIENT BANNER-->
+
+<!-- Select Language -->
+<!-- Select Language -->
+<div class="language-wrapper align-center" role="nav">
+    <!-- Select -->
+    <span class="language-select-div">
+        <label for="select" hidden>Select Language: </label>
+        <select class="language-select" id="select">
+            <option value="da"> Dansk </option>
+            <option value="de"> Deutsch </option>
+            <option value="en"> English </option>
+            <option value="fr"> Francais </option>
+            <option value="it"> Italiano </option>
+            <option value="nl"> Nederlands </option>
+            <option value="no"> Norsk </option>
+            <option value="fi"> Suomi </option>
+            <option value="sv"> Svenska </option>
+            <option value="zh"> ä¸­æï¼ç®ä½)</option>
+    <!--        <option value="ja"> æ¥æ¬èª</option>     -->       
+        </select>
+    </span>
+    <!-- /Select -->
+
+    <!-- Flags -->
+    <span class="language-flag-div" id="flag">
+    </span>
+    <!-- /Flags -->
+</div>
+<!-- /Select Language -->
+
+<!-- Scipt -->
+<script>
+    //Add EventListener to Select
+    document.getElementById("select").addEventListener('change', changeLanguage);
+    
+    //Set Starting Language to Locale Language
+    setLanguage("en");
+
+    //On Change, change used Language
+    //function changeLanguage() {
+    //    var select =  document.getElementById("select");
+    //    setFlag(select.value);
+    //    var url = new URL(window.location.href);
+    //    url.searchParams.set("hl", select.value);
+    //    window.location.href = url.href;
+    //}
+
+
+
+function changeLanguage() {
+    var select = document.getElementById("select");
+    setFlag(select.value);
+    console.log(select.value);
+
+    // Redirect for Chinese language
+    if (select.value === "zh") {
+        var url = new URL("https://support.shlglobal.cn/?hl=zh");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+
+    // Redirect for Japanese language
+/*    if (select.value === "ja") {
+        var url = new URL("https://support-jp.shl.com/?hl=ja");
+        window.location.href = url.href;
+        return; // Exit the function after redirect
+    }
+*/
+    // Handle other languages
+    var url = new URL(window.location.href);
+    url.searchParams.set("hl", select.value);
+    window.location.href = url.href;
+}
+
+
+
+
+
+
+
+    
+    //Set Flags to new Language
+    function setFlag(lang) {
+        var flags = document.getElementById("flag");
+        while(flags.firstChild) {
+            flags.removeChild(flags.lastChild);
+        }
+        var flag = document.createElement("img");
+        switch (lang) {
+            case "da":
+                flag.setAttribute("src", "./assets/img/DanishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "de":
+                flag.setAttribute("src", "./assets/img/GermanFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "en":
+                flag.setAttribute("src", "./assets/img/USFlag.png");
+                flag.setAttribute("alt", "US-Flag");
+                var secondFlag = document.createElement("img");
+                secondFlag.setAttribute("src", "./assets/img/UKFlag.png");
+                secondFlag.setAttribute("alt", "UK-Flag");
+                flags.appendChild(secondFlag);
+                break;
+            case "fr":
+                flag.setAttribute("src", "./assets/img/FrenchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "it":
+                flag.setAttribute("src", "./assets/img/ItalianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "nl":
+                flag.setAttribute("src", "./assets/img/DutchFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "no":
+                flag.setAttribute("src", "./assets/img/NorwegianFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "fi":
+                flag.setAttribute("src", "./assets/img/FinnishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "sv":
+                flag.setAttribute("src", "./assets/img/SwedishFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+            case "zh":
+                flag.setAttribute("src", "./assets/img/ChineseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;
+        /*    case "ja":
+                flag.setAttribute("src", "./assets/img/JapaneseFlag.png");
+                flag.setAttribute("alt", "flag");
+                break;*/
+        }
+        flags.appendChild(flag);
+    }
+
+    //Set Language to lang and call setFlag
+    function setLanguage(lang) {
+        var select =  document.getElementById("select");
+        select.value = lang;
+        setFlag(lang);
+    }
+/*	window.onload = (event) => {
+    };
+
+*/
+	window.onload = (event) => {
+    };
+
+</script>
+<!-- Script -->
+<!-- /Select Language -->
+        <!-- /Header -->
+            <!-- Breadcrumb-->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+						<li class="breadcrumb-item"><a class=" link-BlackToLime" href="index.html?hl=en">Home</a></li>
+                    <li class="breadcrumb-item mw-150px" aria-current="page">Client</li>
+                </ol>
+            </nav>
+            <!-- /Breadcrumb-->
+
+            <!-- Main -->
+
+            <main id="categories" class="bg-shl-grey-tint3">
+                <section class="container-fluid flex-column search-section" style="padding-right: 0px">
+
+                    <!-- Search -->
+                    <div class="py-10 container py-4">
+                        <form method="get" action="search.html" title='Search form'>
+                            <div
+                                class="input-group input-group-lg d-sm-flex d-md-flex d-lg-flex d-xl-flex w-100 mx-auto search-group">
+                                <label for="categorySearch" hidden="hidden">Search
+                                </label>
+                                <input
+                                    title='Searchbar'
+                                    type="search"
+                                    id="categorySearch"
+                                    name="q"
+                                    class="form-control shadow-lg text-center"
+                                    placeholder='What can we help you with?'>
+                                <input type="hidden" name="c" value="10_91_13_">
+                                <input type="hidden" name="hl" value="en">
+                                <button
+                                    title='Searchbutton'
+                                    class="btn btn-shl-lime btn-outline-light shadow-lg search-button"
+                                    type="submit"
+                                    id="button-search">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Search -->
+
+                    <!-- Search by topic -->
+                    <hr>
+                    <h2 class=" h3">
+                        Search by Topic:</h2>
+                    <div class="container topic-container mx-auto">
+                        <div class="row row-cols-1 topic-row-cols-md-5 g-0">
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Platforms">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Platforms
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_18_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_18_145_" class="topic-link">TalentCentral+&trade;</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_18_19_" class="topic-link">TalentCentral&trade;</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_18_20_" class="topic-link">iAssess/AMCAT</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_18_21_" class="topic-link">SHL Online</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_18_22_" class="topic-link">SHL Insights</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_18_23_" class="topic-link">SHL 360</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Managed Services">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Managed Services
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_26_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_26_27_" class="topic-link">Service Offerings</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_26_28_" class="topic-link">Points of Contact</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Training">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Training
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_29_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_29_30_" class="topic-link">SHL Certification and Training</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Billing and Account Setup">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Billing and Account Setup
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_32_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_32_33_" class="topic-link">Credit Card Enquiries</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_32_34_" class="topic-link">South Africa Enquiries</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_32_35_" class="topic-link">Points of Contact</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_32_36_" class="topic-link">Paper and Pencil Orders</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Product Support">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Product Support
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_107_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_107_157_" class="topic-link">Product Retirement Information</a>
+                                                                </li>
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_107_108_" class="topic-link">Reseller Information</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                                        <li>
+                                                                            <a
+                                                                                href='https://www.shl.com/solutions/products/product-catalog/'
+                                                                                class="topic-link"
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer nofollow">Product Support</a>
+                                                                        </li>
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Data Questions">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Data Questions
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_129_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_129_130_" class="topic-link">Data Management</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-3 bg-shl-grey-tint3 border-0">
+                                        <div class="row g-0">
+                                            <div class="col-1 pt-3">
+                                                    <img src="./assets/img/icon-cog-gear.png" class="card-img-top" alt="Product Troubleshooting">
+                                            </div>
+                                            <div class="col-8 topic-row">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h4 topic-title">
+                                                        Product Troubleshooting
+                                                    </h3>
+                                                    <div class="card-text">
+                                                        <ul id="10_91_13_162_-list">
+                                                                <li >
+                                                                    <a href="category.html?hl=en&c=10_91_13_162_167_" class="topic-link">Contact Centre Simulations (CCSims)</a>
+                                                                </li>
+                                                            <!-- Display Additional Links -->
+                                                            <!-- /Display Additional Links -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+                <!-- END Search by Topic-->
+
+                <!-- Top FAQs-->
+                <section class="bg-shl-grey-tint3 container-fluid flex-column">
+                        <h2 class=" h3">View our Frequently Asked Questions:</h2>
+                        <div class="container-fluid pt-4 accordion-section">
+                            <div class="row accordion-section">
+                                <div class="col-xl-9 accordion-section">
+                                    <div class="container-fluid accordion-section">
+                                        <div class="accordion shadow mb-5 accordion-section" id="accordionAuth">
+                                            <div class="accordion-item">
+                                                <div class="d-flex align-items-center justify-content-between px-4 py-5">
+                                                    <div class="me-3">
+                                                        <h3 class="mb-0 h4">Client FAQ</h3>
+                                                        <!-- <p class="card-text text-gray-500">FAQs about system navigation and troubleshooting tips</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-27">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-27"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-27">
+                                                            What should I do if I cannot log in to my TalentCentral&trade; account?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-27"
+                                                        aria-labelledby="heading-SHL-Client-Article-27"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">If you are unable to access your TalentCentralâ¢ platform account, please contact a TalentCentralâ¢ platform administrator at your company. Please be advised that for security reasons your TalentCentralâ¢ account may be disabled if you haven't accessed it in the last three months.<br> <br> If you are the only administrator in your company and need help, please get in touch with us by using the Contact Form widget on the right side of this page.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-27" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-27" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-27">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-27">
+                <label for="comment_SHL-Client-Article-27" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-27" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-27" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-27" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-27')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-27">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-27" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-27')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-27">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-27");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-27"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-27"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-27").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-27").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-27"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-27"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-96">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-96"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-96">
+                                                            Login issues
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-96"
+                                                        aria-labelledby="heading-SHL-Client-Article-96"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p"><strong>1. Unable to login to iAssess.</strong></div> 
+<div class="p">Please make sure you follow the below mentioned steps to login to our portal:</div> 
+<ul> 
+ <li>Use the URL - <a href="https://employer.aspiringminds.com/" title="">https://employer.aspiringminds.com/</a> </li>
+ <li>Type the username provided to you (username is case sensitive) </li>
+ <li>Type the password ï  click on forgot password in case you donât remember your password </li>
+ <li>Enter your email ID and the mail to generate the password will be triggered in your mailbox. </li>
+</ul> 
+<div class="p">Additionally, make sure that the below mentioned URLs are whitelisted at your end. You can connect with you IT team to get this checked.</div> 
+<div class="p">Frontend URL:&nbsp; &nbsp;</div> 
+<div class="p">https://www.myamcat.com/assessments/&nbsp;</div> 
+<div class="p">Backend URL:&nbsp; &nbsp;</div> 
+<div class="p">https://backendemployer.myamcat.com/&nbsp;<br> https://*.aspiringminds.com&nbsp;<br> https://s3.amazonaws.com&nbsp;<br> https://*.cloudfront.net/amcat/<br> &nbsp;</div> 
+<div class="p"><strong>2. Did not receive verification mail for iAssess.</strong></div> 
+<div class="p">Please make sure you follow the below mentioned steps to login to our portal:</div> 
+<ul> 
+ <li>Use the URL - https://employer.aspiringminds.com/ </li>
+ <li>Type the username provided to you (username is case sensitive) </li>
+ <li>Type the password ï  click on forgot password in case you donât remember your password </li>
+ <li>Enter your email ID and the mail to generate the password will be triggered in your mailbox. </li>
+</ul> 
+<div class="p"><strong>3. Getting blank screen/ page not loading.</strong></div> 
+<div class="p">We hope that you are using the most updated version of google chrome/ mozilla firefox to launch the portal. Please clear the browser cache using ctrl+shift+delete and then try&nbsp;to login after a few minutes.<br> &nbsp;</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-96" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-96" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-96">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-96">
+                <label for="comment_SHL-Client-Article-96" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-96" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-96" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-96" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-96')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-96">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-96" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-96')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-96">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-96");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-96"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-96"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-96").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-96").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-96"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-96"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-33">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-33"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-33">
+                                                            Where can I find a Quick Start Guide for the TalentCentral&trade; platform?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-33"
+                                                        aria-labelledby="heading-SHL-Client-Article-33"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">The TalentCentralâ¢ platform's regional Quick Start Guides are attached to this article.&nbsp;</div> 
+<div class="p"><span><a class="attachmentLink" href="documents/495/attachments/2410" title="TalentCentral - Quick Start Guide AU.pdf" data-type="attachment"><img alt="" src="./assets/kbase/img/global_doc.gif" style="  border:none;
+  vertical-align:text-bottom;
+  max-width:100%;
+  width:auto;
+">TalentCentral - Quick Start Guide AU.pdf</a></span>&nbsp;</div> 
+<div class="p"><span><a class="attachmentLink" href="documents/495/attachments/2408" title="TalentCentral - Quick Start Guide CN.pdf" data-type="attachment"><img alt="" src="./assets/kbase/img/global_doc.gif" style="  border:none;
+  vertical-align:text-bottom;
+  max-width:100%;
+  width:auto;
+">TalentCentral - Quick Start Guide CN.pdf</a></span>&nbsp;</div> 
+<div class="p"><span><a class="attachmentLink" href="documents/495/attachments/2407" title="TalentCentral - Quick Start Guide EU.pdf" data-type="attachment"><img alt="" src="./assets/kbase/img/global_doc.gif" style="  border:none;
+  vertical-align:text-bottom;
+  max-width:100%;
+  width:auto;
+">TalentCentral - Quick Start Guide EU.pdf</a></span>&nbsp;</div> 
+<div class="p"><span><a class="attachmentLink" href="documents/495/attachments/2409" title="TalentCentral - Quick Start Guide US.pdf" data-type="attachment"><img alt="" src="./assets/kbase/img/global_doc.gif" style="  border:none;
+  vertical-align:text-bottom;
+  max-width:100%;
+  width:auto;
+">TalentCentral - Quick Start Guide US.pdf</a></span>&nbsp;</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-33" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-33" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-33">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-33">
+                <label for="comment_SHL-Client-Article-33" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-33" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-33" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-33" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-33')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-33">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-33" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-33')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-33">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-33");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-33"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-33"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-33").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-33").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-33"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-33"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-13">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-13"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-13">
+                                                            What user permission levels are available on the TalentCentral&trade; platform?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-13"
+                                                        aria-labelledby="heading-SHL-Client-Article-13"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">When creating a new user on the TalentCentralâ¢ platform, the permission level you choose determines the level of access the user will have on the system. Some user levels, such as <b>Manager</b>, will be assigned more often, while <b>Supervisor</b> or <b>Viewer</b> are more restrictive and may be used less frequently. In order to avoid inadvertent changes to your company settings, <b>Company Admin</b> should only be selected for a limited number of trained individuals.</div> 
+<div class="p">Company Super Users can change user permission levels. If you don't know who in your company is a Company Super User, you can get in touch with our Technical Support teams by using the Contact Form widget on the right side of this page, who can provide you with this information.<br> <br> A user must be assigned to a project, whether via their user group or as an individual, in order to view and make changes to the project dependent on their permission level.<br> <br> <img alt="" class="mediaImage" src="attachmentservice/attachments/getMedia/SHL-Client-Mediapool-13_1/en/*/*/SHL-Client-Mediapool-13_1" style="  max-width:100%;
+  width:auto;
+"><br> <br> Click on the attachment below to view a larger copy of the image.</div> 
+<div class="p"><span><a class="attachmentLink" href="documents/479/attachments/2396" title="User Roles EN.JPG" data-type="attachment"><img alt="" src="./assets/kbase/img/global_doc.gif" style="  border:none;
+  vertical-align:text-bottom;
+  max-width:100%;
+  width:auto;
+">User Roles EN.JPG</a></span>&nbsp;</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-13" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-13" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-13">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-13">
+                <label for="comment_SHL-Client-Article-13" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-13" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-13" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-13" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-13')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-13">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-13" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-13')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-13">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-13");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-13"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-13"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-13").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-13").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-13"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-13"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-35">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-35"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-35">
+                                                            Can I use SHL Online to place an order? 
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-35"
+                                                        aria-labelledby="heading-SHL-Client-Article-35"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">If you wish to place an order for the first time, please register <a href="https://online.shl.com/gb/en-gb/account/profile" target="_blank" title="">here</a> and our Customer Experience team will be in touch to open an SHL Online account for you.<br> <br> Once your account is live, you can download the SHL Online Quick Guide located at the end of this page or contact your local Customer Experience team to get started.</div> 
+<div class="p"><span><a class="attachmentLink" href="documents/497/attachments/2363" title="Self-service QuickGuide.GB.pdf" data-type="attachment"><img alt="" src="./assets/kbase/img/global_doc.gif" style="  border:none;
+  vertical-align:text-bottom;
+  max-width:100%;
+  width:auto;
+">Self-service QuickGuide.GB.pdf</a></span>&nbsp;</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-35" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-35" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-35">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-35">
+                <label for="comment_SHL-Client-Article-35" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-35" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-35" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-35" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-35')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-35">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-35" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-35')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-35">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-35");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-35"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-35"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-35").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-35").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-35"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-35"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-104">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-104"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-104">
+                                                            What do Managed Services offer?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-104"
+                                                        aria-labelledby="heading-SHL-Client-Article-104"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Let Managed Services take care of the administration and management of your online systems. Whether you are a small business with infrequent or intermittent requirements or a large business dealing with high volume assignments, managing candidate and employee assessment can be onerous.<br> <br> Managed Services is a flexible and cost effective way to outsource the administration and project management of online assessment across both your recruitment and development activities.<br> <br> <b>Project Management and support</b><br> - âDedicated project administrator<br> - Set up, administration and management of assessments<br> - Multi-lingual support<br> - Daily or weekly project updates and progress reports<br> - Available 24 hours a day, 5 days a week<br> - Final project summary report<br> <br> <b>Candidate management and support</b><br> - 24 hour candidate response time<br> - Multi-lingual, global support 24 hours a day, 5 days a week<br> <br> <b>Email services</b><br> - Client branded emails to enhance your reputation<br> - Download and delivery of reports<br> <br> <b>Report services</b><br> - Download and delivery of additional reports<br> - Printing and posting of reports<br> <br> <b>Why use Managed Services?</b><br> - Better results: Improved candidate experience and completion rates<br> - Expert support: Available if required 24 hours a day, 5 days a week from our experienced teams<br> - Flexible service: Services tailored to your needs<br> - Cost effective and fast: No system knowledge required â we handle everything<br> - Clients who use Managed Services typically see a 30% uplift in candidate assessment completion rates</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-104" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-104" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-104">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-104">
+                <label for="comment_SHL-Client-Article-104" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-104" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-104" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-104" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-104')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-104">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-104" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-104')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-104">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-104");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-104"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-104"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-104").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-104").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-104"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-104"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-34">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-34"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-34">
+                                                            Where can I get training on the use of the TalentCentral&trade; platform?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-34"
+                                                        aria-labelledby="heading-SHL-Client-Article-34"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">We offer online training to help you get the most out of your TalentCentralâ¢ platform. These training sessions are free of charge and delivered by our experienced systems training team. Please click <a href="https://talentcentral.learning.shl.com/" target="_blank" title="">here</a> to register.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-34" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-34" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-34">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-34">
+                <label for="comment_SHL-Client-Article-34" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-34" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-34" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-34" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-34')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-34">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-34" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-34')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-34">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-34");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-34"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-34"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-34").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-34").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-34"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-34"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h4 class="accordion-header h5" id="heading-SHL-Client-Article-165">
+                                                        <button
+                                                            class="accordion-button p-4 collapsed  no-border"
+                                                            type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse-SHL-Client-Article-165"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse-SHL-Client-Article-165">
+                                                            Who should I notify if my account or address details are incorrect?
+                                                        </button>
+                                                    </h4>
+                                                    <div
+                                                        class="accordion-collapse collapse"
+                                                        id="collapse-SHL-Client-Article-165"
+                                                        aria-labelledby="heading-SHL-Client-Article-165"
+                                                        data-bs-parent="#accordionAuth">
+                                                        <div class="accordion-body p-4">
+                                                            <div class="kcdoc">
+                                                                <div class="p">Please get in touch with us by using the Contact Form widget on the right side of this page or by calling your local Customer Experience team. Please click <a href="https://www.shl.com/en/support/" target="_blank" title="">here</a> to find their contact details and opening hours. Please have all your relevant details to hand.</div>
+
+<div class="helpful-wrapper" id="helpfulWrapper_SHL-Client-Article-165" >
+    <div><hr><br></div>
+    <div id="helpful_SHL-Client-Article-165" class="helpful">
+        <fieldset>
+        <div class="headline">
+            <legend id="headline_SHL-Client-Article-165">Was this article helpful?</legend>
+        </div>
+        <div class="button row" style="min-width: 130px;" role="region">
+            <div class="my-3" id="commentBox_SHL-Client-Article-165">
+                <label for="comment_SHL-Client-Article-165" hidden="hidden">Comment:</label>
+                <textarea type="text" id="comment_SHL-Client-Article-165" name="comment" style="width: 400px;" placeholder="Add a comment..." rows="4" cols="50" maxlength="1000"></textarea><br>
+            </div>
+            <div class="message" id="message_SHL-Client-Article-165" hidden="hidden">
+                <p> Commented.</p>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="like_SHL-Client-Article-165" class="like-button" aria-label='Yes' onclick="like('SHL-Client-Article-165')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-165">
+                    <i class="material-icons md-18" style="display:block;">thumb_up</i>
+                    Yes
+                </button>
+            </div>
+            <div class="col-md-1" style="width: 60px;">
+                <button id="dislike_SHL-Client-Article-165" class="dislike-button"  aria-label='No' onclick="dislike('SHL-Client-Article-165')" style="padding: 1px;" aria-labelledby="headline_SHL-Client-Article-165">
+                    <i class="material-icons md-18" style="display:block;">thumb_down</i>
+                    No
+                </button>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <script>
+        var wrapper = document.getElementById("helpful_SHL-Client-Article-165");
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-165"))  
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-165"));
+        if (showLike) {
+            document.getElementById("like_SHL-Client-Article-165").disabled = true;
+        }
+        if (showDislike) {
+            document.getElementById("dislike_SHL-Client-Article-165").disabled = true;
+        }
+    </script>
+</div>
+<script>
+    function showMessage(docId) {
+        document.getElementById("message_" + docId).hidden = false;
+        document.getElementById("commentBox_" + docId).hidden = true;
+    }
+	function _docRated( docId, likeOrDislike ) {
+		if( likeOrDislike ) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Liked", JSON.stringify(likedDocIds));	
+		} else {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            likedDocIds.push(docId)
+            localStorage.setItem("Disliked", JSON.stringify(likedDocIds));	
+		}
+	}
+	
+    function like(docId) {
+        document.getElementById("like_" + docId).disabled = true;
+        document.getElementById("dislike_" + docId).disabled = false;
+        var helpful = document.getElementById("helpful_" + docId);
+    	var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+		fetch( "./documents/" + encodeURIComponent(docId) + "/like/like?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {				
+			_docRated( docId, true );
+		})
+		.catch(error => console.error(error));
+        var dislikeArray = JSON.parse(localStorage.getItem("Disliked")) || [];
+        var showDislike = dislikeArray.some(x => x.includes("SHL-Client-Article-165"));
+        if (showDislike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Disliked")) || [];
+            var filtered = likedDocIds.filter(function(value){ 
+            return value !== docId;
+            });
+            localStorage.setItem("Disliked", JSON.stringify(filtered));	
+        }
+    }
+	
+    function dislike(docId) {
+        document.getElementById("like_" + docId).disabled = false;
+        document.getElementById("dislike_" + docId).disabled = true;
+        var helpful = document.getElementById("helpful_" + docId);
+	    var feedback = document.getElementById("comment_" + docId).value;
+        document.getElementById("comment_" + docId).value = "";
+        if (feedback) {
+            showMessage(docId);
+        }
+    	fetch( "./documents/" + encodeURIComponent(docId) + "/like/dislike?hl=en", { method: "POST", headers: {"Content-Type": "text/plain"}, body: feedback} )
+    	.then( function(res) {					
+			_docRated( docId, false );
+		})
+		.catch(error => console.error(error));
+        var likeArray = JSON.parse(localStorage.getItem("Liked")) || [];
+        var showLike =  likeArray.some(x => x.includes("SHL-Client-Article-165"))  
+        if (showLike) {
+            var likedDocIds = JSON.parse(localStorage.getItem("Liked")) || [];
+            var filtered = likedDocIds.filter(function(value){
+            return value !== docId;
+            });
+            localStorage.setItem("Liked", JSON.stringify(filtered));	
+        }
+    }
+</script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-shl-grey-tint3 border-top"><br></div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <img
+                                        src="./assets/img/SideBanner.png"
+                                        title='Sidebanner'
+                                        alt='Banner'
+                                        class="category-banner"/>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!-- /Top FAQs -->
+
+                <!-- ToTop -->
+<!-- ToTop Button -->
+<div id="toTop" class="bg-shl-grey-tint3 toTop">
+    <button onclick='window.location.href="#title"' title='To the Top' class="accordion-button bg-shl-lime" style="border-radius: 3px; height: 20px; width: 60px; text-align: center;"></button>
+</div>
+<!-- /ToTop Button -->
+
+<!-- ToTop Script -->
+<script>
+    toTop();
+
+    //Display toTop Button if document-height is to big
+    function toTop() {
+         var toTop = document.getElementById("toTop");
+        if(document.documentElement.scrollHeight > 1080) {
+            toTop.style.display = "block";
+        } else {
+            toTop.style.display = "none";
+        }
+    } 
+</script>
+<!-- /ToTop Script -->                <!-- /ToTop -->
+            </main>
+
+            
+
+            <!-- Footer -->
+<!-- Footer -->
+<footer class="text-center py-3 container-fluid text-center text-white bg-shl-grey flex-column"  style="bottom:0px;">
+    <div class="container-fluid">
+        <div class="row footer-row">
+            <!-- Impressum -->
+            <div class="col text-left text-shl-lime footer-impressum">
+                <div>
+                    Â© 2025 SHL and its affiliates. All rights reserved.
+                </div>
+            </div>
+            <!-- /Impressum -->
+            
+            <!-- Links -->
+            <div class="col text-right text-white">
+                <a href="https://www.shl.com/" class="nounderline link-WhiteToLime">shl.com</a>
+                |
+                <!-- Check if Category is known -->
+                    <a href="./contactUs.html?hl=en&c=10_91_13_" class="nounderline link-WhiteToLime">Contact Us</a>
+                |
+                <a href="https://www.shl.com/en/disability-guidelines-uk/" class="nounderline link-WhiteToLime">Accessibility</a>
+                |
+                <a href="https://www.shl.com/en/privacy/cookies/" class="nounderline link-WhiteToLime">Cookies</a>
+                |
+                <a href="https://www.shl.com/en/privacy/" class="nounderline link-WhiteToLime">Privacy Statement</a>
+                |
+                <a
+                    href="https://support.shl.com/viewArticle.html?d=SHL-Candidate-Article-236&hl=en"
+                    class="nounderline link-WhiteToLime">Data Protection Notice</a>
+                |<br>
+                <a href="https://www.shl.com/en/terms-of-service/" class="nounderline link-WhiteToLime">Terms of Service</a>
+                |
+                <a href='https://www.shl.com/legal/terms-and-conditions/english-uk/ ' class="nounderline link-WhiteToLime">Terms and Conditions</a>
+                |
+            </div>
+            <!-- /Links -->
+        </div>
+    </div>
+    
+</footer>
+<!-- /Footer -->            <!-- Footer -->
+            <!-- Widget, display Phone if Category is Client -->
+<!-- Templates -->
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type='text/javascript'>
+    (function () {
+        var g = function (e, h, f, g) {
+            this.get = function (a) {
+                for (var a = a + "=", c = document.cookie.split(";"), b = 0, e = c.length; b < e; b++) {
+                    for (var d = c[b]; " " == d.charAt(0);) 
+                        d = d.substring(1, d.length);
+                    if (0 == d.indexOf(a)) 
+                        return d.substring(a.length, d.length)
+                }
+                return null
+            };
+            this.set = function (a, c) {
+                var b = "",
+                    b = new Date;
+                b.setTime(b.getTime() + 6048E5);
+                b = "; expires=" + b.toGMTString();
+                document.cookie = a + "=" + c + b + "; path=/; "
+            };
+            this.check = function () {
+                var a = this.get(f);
+                if (a) 
+                    a = a.split(":");
+                else if (100 != e) 
+                    "v" == h && (
+                        e = Math.random() >= e / 100
+                            ? 0
+                            : 100
+                    ),
+                    a = [
+                        h, e, 0
+                    ],
+                    this.set(f, a.join(":"));
+                else 
+                    return !0;
+                var c = a[1];
+                if (100 == c) 
+                    return !0;
+                switch (a[0]) {
+                    case "v":
+                        return !1;
+                    case "r":
+                        return c = a[2] % Math.floor(100 / c),
+                        a[2]++,
+                        this.set(f, a.join(":")),
+                        !c
+                }
+                return !0
+            };
+            this.go = function () {
+                if (this.check()) {
+                    var a = document.createElement("script");
+                    a.type = "text/javascript";
+                    a.src = g;
+                    document.body && document
+                        .body
+                        .appendChild(a)
+                }
+            };
+            this.start = function () {
+                var t = this;
+                "complete" !== document.readyState
+                    ? window.addEventListener
+                        ? window.addEventListener("load", function () {
+                            t.go()
+                        }, !1)
+                        : window.attachEvent && window.attachEvent("onload", function () {
+                            t.go()
+                        })
+                    : t.go()
+            };
+        };
+        try {
+            (new g(
+                100,
+                "r",
+                "QSI_S_ZN_3w4wOrWAQZP1UUu",
+                "https://zn3w4worwaqzp1uuu-shl1.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_3w4wOrWAQZP1UUu"
+            )).start()
+        } catch (i) {}
+    })();
+</script>
+<div id='ZN_3w4wOrWAQZP1UUu'>
+    <!--DO NOT REMOVE-CONTENTS PLACED HERE-->
+</div>
+<!--END WEBSITE FEEDBACK SNIPPET-->
+<!-- /Templates -->
+<!-- Side Phonewidget -->
+<div class="phoneWidget-wrapper">
+    <!-- Open phoneWidget Button -->
+    <div class="phoneWidget-button-section">
+        <button title='Toggle Widget' id="widget-button" class="phoneWidget-button accordion-button phoneWidget-button-collapsed" onClick="onClickWidget()"></button>
+    </div>
+    <!-- /Open phoneWidget Button -->
+
+    <!-- phoneWidget -->
+    <div id="widget" class="bg-shl-lime phoneWidget-section phoneWidget-collapse" style="display: none;">
+        <div class="container-sm bg-shl-lime phoneWidget-container">
+            <div class="row">
+
+                <!-- ContactUS and check for Category -->
+                <div class="col p-0"> 
+                    <div class="card phoneWidget-top-card">
+                        <a href="./contactUs.html?hl=en&c=10_91_13_" class="phoneWidget-link" rel="noopener noreferrer">
+                            <div class="row-1 pt-3 phoneWidget-div">
+                                <img src="./assets/img/outline_contact_page_black_24dp.png"  class="card-img-top phoneWidget-img" alt='$Label["Widget.Alt_ContactForm"]'>
+                                <p class="phoneWidget-paragraph">
+                                    Contact Form
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /ContactUs -->
+
+                <!-- Phonenumber -->
+                <div class="col p-0">
+                    <div class="card phoneWidget-card">
+                        <button  class="phoneWidget-link phone-button" onClick="showPhoneNumbers()">
+                            <div class="row-1 pt-3 phoneWidget-div">
+                                <img src="./assets/img/outline_phone_in_talk_black_24dp.png"  class="card-img-top phoneWidget-img" alt='Phone'>
+                                <p class="phoneWidget-paragraph">
+                                    Phone Numbers
+                                </p>
+                            </div>
+                        </button>
+                    </div> 
+                </div>
+                <!-- /Phonenumber -->
+
+                <!-- Give Feedback, needs to be implemented -->
+                <div class="col p-0">
+                    <div class="card phoneWidget-card">
+                        <a id="widgetFeedbackAnker" class="phoneWidget-link" href="javascript:;" onclick="feedback()"> 
+                            <div class="row-1 pt-3 phoneWidget-div"> 
+                                <img src="./assets/img/outline_rate_review_black_24dp.png"  class="card-img-top phoneWidget-img" alt='Chat'>
+                                <p class="phoneWidget-paragraph">
+                                    Give Feedback
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Give Feedback -->
+
+                <!-- Scheduled Maintenance -->
+                <div class="col p-0">
+                    <div class="card phoneWidget-bottom-card">
+                    <!-- Check if Category is known -->
+                        <a href="schedule.html?hl=en&c=10_91_13_" class="phoneWidget-link"  rel="noopener noreferrer">
+                            <div class="row-1 pt-3 phoneWidget-div">
+                                <img src="./assets/img/outline_event_black_24dp.png"  class="card-img-top phoneWidget-img" alt='Calendar'>
+                                <p class="phoneWidget-paragraph">
+                                    Scheduled Maintenance
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                 <!-- /Scheduled Maintenance -->
+            </div>
+        </div>
+    </div>
+    <!-- /phoneWidget -->
+
+    <!-- Implementation Phonenumber -->
+    <div class="phonenumber-widget" style="display: none;" id="widget-numbers">
+<!-- Phone Number -->
+<section class="container">
+    <div class="row">
+        <!-- Title -->
+        <div class="row widget-phone-title" style="margin-top: 20px;"> 
+            <h2>Phone Numbers</h2>
+        </div>
+        <!-- /Title -->
+
+        <!-- Select -->
+        <form class="input" style="margin-top: 20px;margin-bottom: 20px;" id="form">
+            <div class="select row ">
+                <div class="row">
+                    <label for="selectCountry" class="col-sm-1 h5 location">Location</label>
+                    <!-- Close Button for small Screens, when the Widget isnt open at the same time as the number extension -->
+                    <div class="close col-sm-1">
+                        <button id="closebutton" class="hide-closebutton" onClick="showPhoneNumbers()" title='Close'><img src="./assets/img/outline_close_black_24dp.png" alt='X'></button>
+                    </div>
+                    <!-- /Close Button -->
+                </div>
+                
+                <div class="col-sm-8">
+                    <select type="select" placeholder='Select your nearest location:' id="selectCountry" class="form-select"></select>
+                </div>
+            </div>
+        </form>
+        <!-- /Select -->
+
+        <!-- Displaying Phonenumbers and additional Information -->
+        <div class="number mt-10 row" id="information">
+            <div class="row">
+                <div class="col-sm-4">
+                        <p class="heading h6" >Number:<p>
+                </div> 
+                <div class="col-sm-8">
+                    <p id="number" class="ms-3 text"><p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="heading h6"> Service:<p>
+                </div>
+                <div class="col-sm-8">    
+                    <p id="service" class="ms-3 text"><p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="heading h6">Hours of Operation:<p>
+                </div>
+                <div class="col-sm-8">
+                    <p id="hours" class="ms-3 text"><p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="heading h6">Language(s) Serviced:<p>
+                </div>
+                <div class="col-sm-8">
+                    <p id="language" class="ms-3 text"><p>
+                </div>
+            </div>
+        </div>
+        <!-- /Displaying Phonenumbers -->
+    </div>
+</section>
+<!-- /Phone Number -->
+
+<!-- Script -->
+<script>
+    //Declare Variables
+    var numbers = [
+        {"id":  1, "country": "AU",   "countryName": "Australia",     "typeOfNumber": "Local Sydney number",          "service": "Client Support & Helpdesk",     "phoneNumber": "290371650",     "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": false},
+        {"id":  2,"country": "AU",   "countryName": "Australia",     "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk",     "phoneNumber": "1800091846",    "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+		{"id": 11,"country": "DU",   "countryName": "Bahrain",       "typeOfNumber": "Local Number",                 "service": "Client Support & Helpdesk", "phoneNumber": "16568389",          "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id":  3,"country": "BE",   "countryName": "Belgium",       "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk",     "phoneNumber": "080049683",     "hoursOfOperation": "08:30-18:00", "languagesServiced": "Eng/Fre/Dutch", "isActive": true},
+        {"id":  5,"country": "CN",   "countryName": "China",         "typeOfNumber": "China National Rate Number",   "service": "Client Support & Helpdesk",     "phoneNumber": "4001208840",    "hoursOfOperation": "08:30-18:00", "languagesServiced": "Mandarin", "isActive": true},
+        {"id":  6,"country": "CN",   "countryName": "China",         "typeOfNumber": "China National Rate Number",   "service": "PWC Client Support & Helpdesk ","phoneNumber": "4001209297",    "hoursOfOperation": "07:00-23:00", "languagesServiced": "Mandarin", "isActive": false},
+        {"id":  8,"country": "DK",   "countryName": "Denmark",       "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "80889791",          "hoursOfOperation": "08:30-17:00", "languagesServiced": "Eng/Danish", "isActive": true},
+        {"id":  9,"country": "DU",   "countryName": "Dubai",         "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "8000440581",        "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id": 13,"country": "DU",   "countryName": "Egypt",         "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "08000009094",       "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+		{"id": 16,"country": "FI",   "countryName": "Finland",       "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "0800-9-19639",      "hoursOfOperation": "09:00-17:00", "languagesServiced": "Eng/Finnish", "isActive": true},
+        {"id": 17,"country": "FR",   "countryName": "France",        "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "0805101686",        "hoursOfOperation": "08:30-18:00", "languagesServiced": "French", "isActive": true},
+		{"id":  7,"country": "DE",   "countryName": "Germany",       "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "0800-6647991",      "hoursOfOperation": "08:30-18:00", "languagesServiced": "Eng/Ger", "isActive": true},
+        {"id": 18,"country": "HK",   "countryName": "Hong Kong",     "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "800966235",         "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id": 19,"country": "HK",   "countryName": "Hong Kong",     "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "85258080421",       "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": false},
+        {"id": 21,"country": "IN",   "countryName": "India",         "typeOfNumber": "Toll free",                    "service": "Client Helpdesk",           "phoneNumber": "0008001007444",     "hoursOfOperation": "08:30-22:00", "languagesServiced": "English", "isActive": true},
+        {"id": 22,"country": "IN",   "countryName": "India",         "typeOfNumber": "Local Mumbai Number",          "service": "Client Helpdesk",           "phoneNumber": "40929209",          "hoursOfOperation": "08:30-22:00", "languagesServiced": "English", "isActive": false},
+		{"id": 20,"country": "IE",   "countryName": "Ireland",       "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "1800947745",        "hoursOfOperation": "08:00-18:00", "languagesServiced": "English", "isActive": true},
+        {"id": 23,"country": "IT",   "countryName": "Italy",         "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "800976020",         "hoursOfOperation": "08:30-18:00", "languagesServiced": "Eng/Italian", "isActive": true},
+		{"id": 15,"country": "DU",   "countryName": "Jordan",        "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "80022086",          "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id": 24,"country": "NL",   "countryName": "Netherlands",   "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "08000203243",       "hoursOfOperation": "08:30-18:00", "languagesServiced": "Eng/Dutch", "isActive": true},
+		{"id": 26,"country": "NZ",   "countryName": "New Zealand",   "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "800 452 214",       "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id": 25,"country": "NO",   "countryName": "Norway",        "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "80011925",          "hoursOfOperation": "08:30-17:00", "languagesServiced": "Eng/Norwegian", "isActive": true},
+		{"id": 14,"country": "DU",   "countryName": "Oman",          "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "80077214",          "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+		{"id": 10,"country": "DU",   "countryName": "Qatar",         "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "800100522",         "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+		{"id": 12,"country": "DU",   "countryName": "Saudi Arabia",  "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "8008500153",        "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+		{"id":  29,"country": "SG",   "countryName": "Singapore",     "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "8004411352",        "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id": 27,"country": "SA",   "countryName": "South Africa",  "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "0800999914",        "hoursOfOperation": "08:30-17:00", "languagesServiced": "English", "isActive": true},
+        {"id":  28,"country": "SE",   "countryName": "Sweden",        "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk", "phoneNumber": "0200896825",        "hoursOfOperation": "08:30-17:00", "languagesServiced": "Eng/Sweden", "isActive": true},
+		{"id":  4,"country": "CH",   "countryName": "Switzerland",   "typeOfNumber": "Toll free",                    "service": "Client Support & Helpdesk",     "phoneNumber": "0800-002668",   "hoursOfOperation": "08:30-18:00", "languagesServiced": "Eng/Ger/Fre", "isActive": true},
+        {"id":  30,"country": "UK",   "countryName": "United Kingdom","typeOfNumber": "UK Local Number",              "service": "Client Support & Helpdesk", "phoneNumber": "03301003435",       "hoursOfOperation": "08:30-18:00", "languagesServiced": "English", "isActive": true},
+        {"id":  31,"country": "UK",   "countryName": "United Kingdom","typeOfNumber": "UK Local Number",              "service": "International number PSTN", "phoneNumber": "0207 022 8999",     "hoursOfOperation": "00:00-23:589", "languagesServiced": "English", "isActive": false},
+        {"id":  32,"country": "US",   "countryName": "United States", "typeOfNumber": "Toll free",                    "service": "US Main no",                "phoneNumber": "18008997451",       "hoursOfOperation": "08:00-22:00", "languagesServiced": "English", "isActive": true},
+        {"id":  33,"country": "US",   "countryName": "United States", "typeOfNumber": "Local Number",                 "service": "US Brain Bench ",           "phoneNumber": "3472931676",        "hoursOfOperation": "08:00-22:00", "languagesServiced": "English", "isActive": false},
+    ];
+    var select = document.getElementById("selectCountry");
+    var form = document.getElementById("form");
+
+    //Add all Options to Select
+    addOptionsToSelect();
+
+    //Add Event Listener to Select
+    select.addEventListener("change", changeNumber);
+
+    //Add all Options to the Select Field
+    function addOptionsToSelect() {
+        var placeholder = document.createElement('option');
+        placeholder.value = "";
+        placeholder.setAttribute('disabled', 'disabled');
+        placeholder.setAttribute('selected', 'selected');
+        placeholder.text = 'Select nearest location...';
+        select.appendChild(placeholder);
+        numbers.forEach(element => {
+            if (element.isActive) {
+                var opt = document.createElement('option');
+                opt.value = element.id;
+                opt.text = element.countryName;
+                select.appendChild(opt);
+            }
+        });
+    }
+
+    //onChange, change the Numbers displayed
+    function changeNumber() {
+        var info = document.getElementById("information");
+        var number = document.getElementById("number");
+        var headings = document.getElementsByClassName("heading");
+        for (var heading of headings) {
+            heading.style.display = "block";
+        };
+        numbers.forEach(element => {
+            if (element.id == select.value && element.country) {
+                number.innerHTML = element.phoneNumber + " " + element.typeOfNumber;
+                document.getElementById("service").innerHTML = element.service;
+                document.getElementById("hours").innerHTML = element.hoursOfOperation;
+                document.getElementById("language").innerHTML = element.languagesServiced;
+            }
+        });
+    }
+</script>
+<!-- /Script -->    </div> 
+    <!-- /Implementation Phonenumber -->
+</div> 
+<!-- /Side phoneWidget -->
+
+<!-- Java Script for phoneWidget -->
+<script>
+    //Extends the Widget on Click
+    function onClickWidget() {
+        var widget = document.getElementById("widget");
+        var button = document.getElementById("widget-button");
+        var numbers = document.getElementById("widget-numbers");
+        var closeButton = document.getElementById("closebutton");
+        if (widget.style.display === "none") {
+            widget.style.display = "block";
+            button.classList.add("phoneWidget-button-open");
+            button.classList.remove("phoneWidget-button-collapsed");    
+        } else {
+            widget.style.display = "none";
+            button.classList.remove("widget-button-phone-open");
+            button.classList.add("phoneWidget-button-collapsed");  
+            button.classList.remove("phoneWidget-button-open");
+            closeButton.classList.remove("show-closebutton");
+            closeButton.classList.add("hide-closebutton");
+            numbers.style.display = "none";       
+        }
+    }
+
+    //Show the PhoneNumber Extension for the Widget
+    function showPhoneNumbers() {
+        var numbers = document.getElementById("widget-numbers");
+        var button = document.getElementById("widget-button");
+        var widget = document.getElementById("widget");
+        var closeButton = document.getElementById("closebutton");
+        if (numbers.style.display == "none") {
+            button.classList.add("widget-button-phone-open");
+            widget.classList.add("widget-phone-open");
+            widget.classList.remove("widget-phone-close");
+            closeButton.classList.remove("hide-closebutton");
+            closeButton.classList.add("show-closebutton");     
+            numbers.style.display = "block";
+        } else {    
+            button.classList.remove("widget-button-phone-open");
+            widget.classList.add("widget-phone-close");
+            widget.classList.remove("widget-phone-open");
+            closeButton.classList.remove("show-closebutton");
+            closeButton.classList.add("hide-closebutton");
+            numbers.style.display = "none";
+        }
+    }
+
+    function feedback(evt)
+	{
+		//evt.preventDefault();
+		if( QSI && QSI.API )
+		{
+			console.log("QSI initialized");
+			QSI.API.run();
+			console.log("QSI run called");
+		}
+		else
+		{
+			console.log("QSI not initialized");
+		}
+		
+		return false;
+	}
+
+    window.setTimeout(onClickWidget, 10);
+</script>
+<!-- /Java Script for phoneWidget -->            <!-- /Widget -->
+<script>
+    window.haptikInitSettings = {
+        "business-id": "8127",
+        "client-id": "5c3ba0ae7efa21fdafe8e6368d17be58bb926eaf",
+        "base-url": "https://api-na.haptikapi.com/",
+        "ignore-storage": true,
+        "custom-css": "./assets/custom_css/bot.css",
+        
+        sdkEvents: event => {
+            event['event'] = event['event_name']
+            dataLayer.push(event)
+        }
+    };
+
+
+    if (document.cookie.indexOf("CookieConsent=") === -1){
+        cookieStore.addEventListener('change', ({changed}) => {
+            for (const {name, value} of changed) {
+               if (name === "CookieConsent" && value.includes("necessary:true")) {
+                    addBot();
+               }
+            }
+        });
+    } else {
+        addBot();
+    }
+
+    function addBot() {
+        var botScript = document.createElement('script');
+        botScript.setAttribute('src','https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js');
+        botScript.setAttribute('charset','UTF-8');
+        botScript.setAttribute('text','text/javascript');
+        document.body.appendChild(botScript);
+    }
+</script>
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-47402278-3"></script>    </body>
+</html>

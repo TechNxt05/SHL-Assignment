@@ -1,0 +1,15 @@
+{
+  "id": "trace_sales",
+  "expected_assessments": ["Account Manager Solution", "Sales Solution", "OPQ MQ Sales Report"],
+  "turns": [
+    {
+      "user": "I need to hire a sales manager."
+    },
+    {
+      "user": "It's a senior role. I need someone who is good at negotiation and relationship management."
+    },
+    {
+      "user": "I'd prefer a mix of behavioral assessments and personality reports."
+    }
+  ]
+}
