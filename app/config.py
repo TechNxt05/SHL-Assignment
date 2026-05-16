@@ -38,8 +38,8 @@ MAX_PER_CATEGORY = 3  # Max assessments of same Test Type (A, B, C, etc.)
 MMR_LAMBDA = 0.5      # Diversity vs Relevance balance
 
 # Timeout Settings
-LLM_TIMEOUT = 15.0
-TOTAL_REQUEST_TIMEOUT = 25.0
+LLM_TIMEOUT = 30.0
+TOTAL_REQUEST_TIMEOUT = 45.0
 
 # LLM Models
 PRIMARY_MODEL = "gemini-2.0-flash"

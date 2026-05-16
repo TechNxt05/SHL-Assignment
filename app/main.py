@@ -36,8 +36,10 @@ async def lifespan(app: FastAPI):
 
         # 2. Initialize retrieval (BM25 + FAISS)
         from app.services.retrieval import initialize_retrieval
+        from app.services.embeddings import get_model
         initialize_retrieval()
-        logger.info("Retrieval indexes initialized")
+        get_model()  # WARM UP: Load model into RAM now
+        logger.info("Retrieval indexes initialized and model warmed up")
 
         # 3. Verify Gemini API key is set
         api_key = os.environ.get("GEMINI_API_KEY")

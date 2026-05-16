@@ -83,7 +83,7 @@ async def run_scenario(url: str, scenario: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 async def main():
-    url = "http://localhost:8000"
+    url = "https://shl-assignment-ev9j.onrender.com"
     os.makedirs("evaluation/reports", exist_ok=True)
     
     results = []
