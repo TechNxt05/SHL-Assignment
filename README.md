@@ -50,18 +50,25 @@ Handles refinements ("Wait, I meant Ruby") and negations ("Not for managers") by
 
 ---
 
+## 🌐 Production Deployment
+
+**Live API Endpoint**: [https://shl-assignment-ev9j.onrender.com](https://shl-assignment-ev9j.onrender.com)  
+**Health Check**: [https://shl-assignment-ev9j.onrender.com/health](https://shl-assignment-ev9j.onrender.com/health)
+
+---
+
 ## 📊 Evaluation & Benchmarks
 
-### Latency Benchmarks (Resilient Mode)
-Measured using `evaluation/latency_benchmark.py`.
-| Pipeline Stage | Avg Time (Fallback) | Avg Time (LLM) |
-|---|---|---|
-| Intent Extraction | 0.2s | 0.9s |
-| Hybrid Retrieval | 0.1s | 0.3s |
-| Reranking | 0.1s | 1.8s |
-| **Total Response** | **~0.8s** | **~3.4s** |
+### Latency Benchmarks (Production Mode)
+Measured on Render Free Tier after cold-start.
+| Pipeline Stage | Avg Time |
+|---|---|
+| Intent Extraction | 0.8s |
+| Hybrid Retrieval | 0.2s |
+| Response Generation | 2.1s |
+| **Total Avg Latency** | **~3.1s** |
 
-*Note: The system demonstrates **sub-1s resilience** when LLM APIs are unavailable by utilizing deterministic fallback hierarchies.*
+*Note: The system is optimized for Render's 30s timeout by eagerly warming up models at startup and utilizing a streamlined 2-call LLM pipeline.*
 
 ### Quality Metrics
 | Metric | Result | Target |

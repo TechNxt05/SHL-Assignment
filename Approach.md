@@ -22,7 +22,13 @@ A 'Production-Oriented' system must never provide false information.
 - **Hard-Lock Validation**: We implemented a validator that acts as a hard filter against the 303-item official catalog. Any assessment not in the whitelist is physically blocked from the output.
 - **Fallback Hierarchies**: Every external API dependency (Gemini) is wrapped in a fallback block. In the event of an API outage or key invalidation, the system degrades gracefully to a rule-based conversational mode rather than crashing.
 
-## 5. Evaluation-First Development
+## 5. Performance Systems Engineering (Render Optimizations)
+To achieve a production-ready feel on Render's 512MB/Free Tier, we implemented high-impact optimizations:
+- **Index Pre-Building**: Moving FAISS index construction to the build phase to eliminate 500MB+ RAM spikes at runtime.
+- **Eager Model Warming**: Loading the SentenceTransformer and Gemini SDK during the startup lifespan event.
+- **Pipeline Streamlining**: Reducing the LLM chain from 3 sequential calls to 2, significantly improving response speed while maintaining intent precision.
+
+## 6. Evaluation-First Development
 Metrics were not added post-hoc; they were the primary drivers of development.
 - **Recall@10**: Our target was >50%; we achieved **66.7%** through iterative query expansion tuning.
 - **Adversarial Probes**: We built a replay harness to simulate 'hostile' evaluators (contradictions, injections, competitor mentions) to verify guardrail integrity.
