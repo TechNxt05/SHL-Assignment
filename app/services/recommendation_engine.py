@@ -30,13 +30,8 @@ async def generate_recommendations(intent: dict, max_results: int = 10) -> List[
         fallback_data = get_fallback_recommendations()
         return [Recommendation(**item) for item in fallback_data[:max_results]]
 
-    # Step 2: Reranking
-    try:
-        ranked = await reranker.rerank(candidates=candidates, intent=intent, max_results=max_results)
-        logger.info(f"After LLM reranking: {len(ranked)} items")
-    except Exception as e:
-        logger.warning(f"Reranking failed ({e}) — falling back to retrieval order")
-        ranked = candidates[:max_results]
+    # Step 2: Use retrieval results directly (Reranking skipped for latency optimization on Render)
+    ranked = candidates[:max_results]
 
     # Step 3: Format as Recommendation objects
     recommendations = []

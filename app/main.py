@@ -41,12 +41,10 @@ async def lifespan(app: FastAPI):
         get_model()  # WARM UP: Load model into RAM now
         logger.info("Retrieval indexes initialized and model warmed up")
 
-        # 3. Verify Gemini API key is set
-        api_key = os.environ.get("GEMINI_API_KEY")
-        if not api_key:
-            logger.warning("GEMINI_API_KEY not set — LLM calls will fail!")
-        else:
-            logger.info("Gemini API key configured")
+        # 3. Verify Gemini API key and initialize client
+        from app.services.llm import _get_client
+        _get_client()
+        logger.info("Gemini client initialized and warmed up")
 
         logger.info("SHL Recommender is ready")
         yield

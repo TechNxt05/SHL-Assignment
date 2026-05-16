@@ -15,22 +15,22 @@ from tenacity import (
     wait_exponential,
 )
 
+import google.genai as genai
 from app.config import PRIMARY_MODEL, FALLBACK_MODEL, LLM_TIMEOUT, GEMINI_API_KEY
 
 logger = logging.getLogger(__name__)
 
-# Lazy client singleton
-_client = None
+# Initialize client eagerly
+if not GEMINI_API_KEY:
+    logger.warning("GEMINI_API_KEY environment variable not set")
+    _client = None
+else:
+    _client = genai.Client(api_key=GEMINI_API_KEY)
+    logger.info(f"Gemini client initialized with model: {PRIMARY_MODEL}")
 
 def _get_client():
-    """Lazy-initialize the Gemini client."""
-    global _client
     if _client is None:
-        import google.genai as genai
-        if not GEMINI_API_KEY:
-            raise ValueError("GEMINI_API_KEY environment variable not set")
-        _client = genai.Client(api_key=GEMINI_API_KEY)
-        logger.info(f"Gemini client initialized with model: {PRIMARY_MODEL}")
+        raise ValueError("GEMINI_API_KEY environment variable not set")
     return _client
 
 
